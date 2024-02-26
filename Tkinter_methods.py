@@ -1,4 +1,5 @@
 from tkinter import messagebox
+from Esercizio import Esercizio
 
 def drag_start(event):
     widget = event.widget
@@ -17,3 +18,31 @@ def Valida_input(testo):
     else:
         messagebox.showerror("Error", "Si prega di inserire esclusivamente valori numerici")
         return False
+    
+
+def Valori_esercizio(ex: Esercizio,
+                     tematica,
+                     testo,
+                     oda,
+                     sottotematica,
+                     trasversalità,
+                     centralità,
+                     dsa,
+                     tipologia,
+                     infamia,
+                     livello,
+                     materia,
+                     risposta
+                     ):
+    ex.materia = materia.get()
+    ex.risposta = risposta.get()
+    ex.tematica = tematica.get()
+    ex.testo = testo.get()
+    ex.argomento.oda = oda.get()
+    ex.argomento.sottotematica = sottotematica.get()
+    ex.argomento.trasversalità = trasversalità
+    ex. argomento.centralità = centralità.get()
+    ex.difficoltà.dsa = dsa
+    ex.difficoltà.tipologia = tipologia.get()
+    ex.difficoltà.infamia = infamia.get()
+    ex.difficoltà.livello = livello.get()

@@ -1,6 +1,7 @@
 import tkinter as tk
 from Esercizio import Esercizio
-
+from Tkinter_methods import Valori_esercizio
+from Carica_esercizio import Creazione_dati
 def Finestra_caricamento(es: Esercizio):
     caricamento = tk.Tk()
 
@@ -45,7 +46,6 @@ def Finestra_caricamento(es: Esercizio):
     #trasversalità
     trasversalità = tk.Checkbutton(caricamento, background = "light green", text="L'esercizio ha trasversalità per più materie?", variable= es.argomento.trasversalità)
     trasversalità.grid(row=5, column=0)
-    print("trasversalità: ", trasversalità)
 
     #centralità
     centralità = tk.Label(caricamento, bg="light green", text="Inserire la centralità dell'esercizio alla sua sottotematica")    
@@ -56,6 +56,10 @@ def Finestra_caricamento(es: Esercizio):
     
 
 #Difficoltà
+    #dsa
+    dsa = tk.Checkbutton(caricamento, background = "light green", text="L'esercizio presenta difficoltà per chi soffre di disturbi specifici dell'apprendimento?", variable= es.difficoltà.dsa)
+    dsa.grid(row=11, column=0)
+
     #tipologia
     tipologia = tk.Label(caricamento, bg="light green", text="Scegliere la tipologia dell'esercizio")    
     tipologia.grid(row=7, column=0)
@@ -99,9 +103,26 @@ def Finestra_caricamento(es: Esercizio):
 
     risposta_in = tk.Entry(caricamento, validate="key")
     risposta_in.grid(row=10, column=1)
+
+    def Bottone_carica():
+        Valori_esercizio(es, 
+                         tematica_in, 
+                         testo_in, 
+                         oda_in, 
+                         sottotematica_in, 
+                         es.argomento.trasversalità, 
+                         centralità_in, 
+                         es.difficoltà.dsa, 
+                         tip_selezionata, 
+                         lvl_selezionato, 
+                         selezionato, 
+                         materia_in, 
+                         risposta_in)
+        Creazione_dati(es=es)
+
 #bottone per fissare i valori alla variabile esercizio e chiamare il json
-  #  get_value_button = tk.Button(caricamento, text="Carica l'esercizio", command=Genera_esercizio)
-   # get_value_button.grid(row=10, column=4)
+    valori_esercizio = tk.Button(caricamento, text="Carica l'esercizio", command=Bottone_carica())
+    valori_esercizio.grid(row=12, column=2)
     
    # get_option_button = tk.Button(root, text="Get Option", command=option_selected)
 #    get_option_button.pack(pady=5)
