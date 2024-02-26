@@ -61,12 +61,44 @@ def Finestra_caricamento(es: Esercizio):
     tipologia.grid(row=7, column=0)
 
     tipologie = ["teoria", "definizione", "problema", "esercizio"]
-    selezionata = tk.StringVar()
-    selezionata.set(tipologie[3])
-    tipologia_in = tk.OptionMenu(caricamento, selezionata, *tipologie)
+    tip_selezionata = tk.StringVar()
+    tip_selezionata.set(tipologie[3])
+    tipologia_in = tk.OptionMenu(caricamento, tip_selezionata, *tipologie)
     tipologia_in.grid(row=7, column = 1)
 
-    
+    #infamia
+    infamia = tk.Label(caricamento, bg="light green", text="Scegliere il livello di infamia dell'esercizio")    
+    infamia.grid(row=8, column=0)
+
+    lvl_infamia = [1, 2, 3, 4, 5, 666]
+    lvl_selezionato = tk.StringVar()
+    lvl_selezionato.set(lvl_infamia[2])
+    infamia_in = tk.OptionMenu(caricamento, lvl_selezionato, *lvl_infamia)
+    infamia_in.grid(row=8, column=1)
+
+    #livello
+    livello = tk.Label(caricamento, bg="light green", text="Scegliere il livello dell'esercizio")    
+    livello.grid(row=9, column=0)
+
+    livelli = ["base", "medio", "avanzato"]
+    selezionato = tk.StringVar()
+    selezionato.set(livelli[0])
+    livello_in = tk.OptionMenu(caricamento, selezionato, *livelli)
+    livello_in.grid(row=9, column=1)
+
+    #materia
+    materia = tk.Label(caricamento, bg="light green", text="Inserire la materia a cui appartiene l'esercizio")    
+    materia.grid(row=10, column=0)
+
+    materia_in = tk.Entry(caricamento, validate="key")
+    materia_in.grid(row=10, column=1)
+
+    #risposta
+    risposta = tk.Label(caricamento, bg="light green", text="Inserire la risposta dell'esercizio")    
+    risposta.grid(row=10, column=0)
+
+    risposta_in = tk.Entry(caricamento, validate="key")
+    risposta_in.grid(row=10, column=1)
 #bottone per fissare i valori alla variabile esercizio e chiamare il json
   #  get_value_button = tk.Button(caricamento, text="Carica l'esercizio", command=Genera_esercizio)
    # get_value_button.grid(row=10, column=4)

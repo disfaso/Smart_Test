@@ -3,20 +3,24 @@ from Esercizio import Esercizio
 
 def Creazione_dati(es: Esercizio):
     dati = {
-  "tematica" : es.tematica,
-  "testo" : es.testo, 
-	"argomento" : {
-    "obiettivi di apprendimento" : " ",
-    "sottotematica" : "moto rettilineo uniforme",
-    "trasversalità" : " ",
-    "centralità" : "3",
-  },
-  "difficoltà" : {
-    "DSA" : "2",
-    "tipologia" : "problema",
-    "tnfamia" : "5"
-    "livello" : "medio",
-  }
-  "materia" : es.materia,
-  "risposta" : es.risposta,
-}
+        "tematica" : es.tematica,
+        "testo" : es.testo, 
+        "materia" : es.materia,
+        "risposta" : es.risposta,
+	    "argomento" : {
+                        "oda" : es.argomento.oda,
+                        "sottotematica" : es.argomento.sottotematica,
+                        "trasversalità" : es.argomento.trasversalità,
+                        "centralità" : es.argomento.centralità,
+                    },
+        "difficoltà" : {
+                        "DSA" : es.difficoltà.dsa,
+                        "tipologia" : es.difficoltà.tipologia,
+                        "infamia" : es.difficoltà.infamia,
+                        "livello" : es.difficoltà.livello,
+                    }
+        }
+    
+    file_path = "Esercizi.json"
+    
+    json.dump(dati, open(file_path, "w"), indent=4)
