@@ -21,6 +21,6 @@ def Creazione_dati(es: Esercizio):
                     }
         }
     
-    file_path = "Esercizi.json"
-    
+    organizer = str(es.materia)
+    file_path = f"./Smart_Test/{organizer}_Esercizi.json"
     json.dump(dati, open(file_path, "w"), indent=4)

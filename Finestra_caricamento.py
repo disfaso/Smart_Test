@@ -58,7 +58,7 @@ def Finestra_caricamento(es: Esercizio):
 #Difficoltà
     #dsa
     dsa = tk.Checkbutton(caricamento, background = "light green", text="L'esercizio presenta difficoltà per chi soffre di disturbi specifici dell'apprendimento?", variable= es.difficoltà.dsa)
-    dsa.grid(row=11, column=0)
+    dsa.grid(row=12, column=0)
 
     #tipologia
     tipologia = tk.Label(caricamento, bg="light green", text="Scegliere la tipologia dell'esercizio")    
@@ -99,10 +99,10 @@ def Finestra_caricamento(es: Esercizio):
 
     #risposta
     risposta = tk.Label(caricamento, bg="light green", text="Inserire la risposta dell'esercizio")    
-    risposta.grid(row=10, column=0)
+    risposta.grid(row=11, column=0)
 
     risposta_in = tk.Entry(caricamento, validate="key")
-    risposta_in.grid(row=10, column=1)
+    risposta_in.grid(row=11, column=1)
 
     def Bottone_carica():
         Valori_esercizio(es, 
@@ -121,8 +121,8 @@ def Finestra_caricamento(es: Esercizio):
         Creazione_dati(es=es)
 
 #bottone per fissare i valori alla variabile esercizio e chiamare il json
-    valori_esercizio = tk.Button(caricamento, text="Carica l'esercizio", command=Bottone_carica())
-    valori_esercizio.grid(row=12, column=2)
+    valori_esercizio = tk.Button(caricamento, text="Carica l'esercizio", command=Bottone_carica)
+    valori_esercizio.grid(row=13, column=2)
     
    # get_option_button = tk.Button(root, text="Get Option", command=option_selected)
 #    get_option_button.pack(pady=5)
