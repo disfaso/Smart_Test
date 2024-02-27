@@ -25,189 +25,195 @@ def Genera(
     verifica = Verifica(n_quesiti)
 
     filepath = f"./Smart_Test/{materia}_Esercizi.json"
-    with open(filepath, "r") as file:
-        dati = file.readlines()
-
+    try:
+        with open(filepath, "r") as file:
+            # dati = file.readlines()
+            dati_esercizio = json.load(file)
+    except FileNotFoundError:
+        print(f"File '{filepath}' not found.")
+    except json.JSONDecodeError as e:
+        print(f"Error decoding JSON: {e}")
     
     esercizi = []
 
-    for json_str in dati:
-        dati_esercizio = json.loads(json_str)
+ #   for json_str in dati:
+ #       dati_esercizio = json.loads(json_str)
 
 # esercizi
  #   def Sel_esercizi(numero, tipologia: str):
-    for _ in range(n_esercizi):
-        if dati_esercizio.get("difficoltà",{}).get("tipologia") == "esercizio":
-            if dati_esercizio.get("tematica") == tematica:
-                if dati_esercizio.get("argomento", {}).get("sottotematica") == sottotematica:
-                    if n_avanzati >= a_count:
-                        if dati_esercizio.get("difficoltà",{}).get("livello") == "avanzati":
-                            esercizio = Esercizio(
-                                            tematica=dati_esercizio.get("tematica", ""),
-                                            testo=dati_esercizio.get("testo", ""),
-                                            argomento=Argomento(**dati_esercizio.get("argomento", {})),
-                                            difficolta=Difficolta(**dati_esercizio.get("difficolta", {})),
-                                            materia=dati_esercizio.get("materia", ""),
-                                            risposta=dati_esercizio.get("risposta", "")
-                                        )
-                            esercizi.append(esercizio)
-                            a_count += 1
-                                    
-                    elif n_medi >= m_count:
-                        if dati_esercizio.get("difficoltà",{}).get("livello") == "medi":
-                            esercizio = Esercizio(
-                                            tematica=dati_esercizio.get("tematica", ""),
-                                            testo=dati_esercizio.get("testo", ""),
-                                            argomento=Argomento(**dati_esercizio.get("argomento", {})),
-                                            difficolta=Difficolta(**dati_esercizio.get("difficolta", {})),
-                                            materia=dati_esercizio.get("materia", ""),
-                                            risposta=dati_esercizio.get("risposta", "")
-                                        )
-                            esercizi.append(esercizio)
-                            m_count += 1
-                    
-                    elif n_base >= b_count:
-                        if dati_esercizio.get("difficoltà",{}).get("livello") == "base":
-                            esercizio = Esercizio(
-                                            tematica=dati_esercizio.get("tematica", ""),
-                                            testo=dati_esercizio.get("testo", ""),
-                                            argomento=Argomento(**dati_esercizio.get("argomento", {})),
-                                            difficolta=Difficolta(**dati_esercizio.get("difficolta", {})),
-                                            materia=dati_esercizio.get("materia", ""),
-                                            risposta=dati_esercizio.get("risposta", "")
-                                        )
-                            esercizi.append(esercizio)
-                            b_count += 1    
-                    
-
-    for _ in range(n_problemi):
-        if dati_esercizio.get("difficoltà",{}).get("tipologia") == "problema":
-            if dati_esercizio.get("tematica") == tematica:
-                if dati_esercizio.get("argomento", {}).get("sottotematica") == sottotematica:
-                    if n_avanzati >= a_count:
-                        if dati_esercizio.get("difficoltà",{}).get("livello") == "avanzati":
-                            esercizio = Esercizio(
-                                            tematica=dati_esercizio.get("tematica", ""),
-                                            testo=dati_esercizio.get("testo", ""),
-                                            argomento=Argomento(**dati_esercizio.get("argomento", {})),
-                                            difficolta=Difficolta(**dati_esercizio.get("difficolta", {})),
-                                            materia=dati_esercizio.get("materia", ""),
-                                            risposta=dati_esercizio.get("risposta", "")
-                                        )
-                            esercizi.append(esercizio)
-                            a_count += 1
+    #n_esercizi deve essere randomizzato in qualche modo
+    for esercizio_prova in dati_esercizio[:n_esercizi]:
+            if esercizio_prova.get("difficoltà",{}).get("tipologia") == "esercizio":
+                if esercizio_prova.get("tematica") == tematica:
+                    if esercizio_prova.get("argomento", {}).get("sottotematica") == sottotematica:
+                        if n_avanzati >= a_count:
+                            if esercizio_prova.get("difficoltà",{}).get("livello") == "avanzati":
+                                esercizio = Esercizio(
+                                                tematica=esercizio_prova.get("tematica", ""),
+                                                testo=esercizio_prova.get("testo", ""),
+                                                argomento=Argomento(**esercizio_prova.get("argomento", {})),
+                                                difficolta=Difficolta(**esercizio_prova.get("difficolta", {})),
+                                                materia=esercizio_prova.get("materia", ""),
+                                                risposta=esercizio_prova.get("risposta", "")
+                                            )
+                                esercizi.append(esercizio)
+                                a_count += 1
                                         
-                    elif n_medi >= m_count:
-                        if dati_esercizio.get("difficoltà",{}).get("livello") == "medi":
-                            esercizio = Esercizio(
-                                            tematica=dati_esercizio.get("tematica", ""),
-                                            testo=dati_esercizio.get("testo", ""),
-                                            argomento=Argomento(**dati_esercizio.get("argomento", {})),
-                                            difficolta=Difficolta(**dati_esercizio.get("difficolta", {})),
-                                            materia=dati_esercizio.get("materia", ""),
-                                            risposta=dati_esercizio.get("risposta", "")
-                                        )
-                            esercizi.append(esercizio)
-                            m_count += 1
+                        elif n_medi >= m_count:
+                            if esercizio_prova.get("difficoltà",{}).get("livello") == "medi":
+                                esercizio = Esercizio(
+                                                tematica=esercizio_prova.get("tematica", ""),
+                                                testo=esercizio_prova.get("testo", ""),
+                                                argomento=Argomento(**esercizio_prova.get("argomento", {})),
+                                                difficolta=Difficolta(**esercizio_prova.get("difficolta", {})),
+                                                materia=esercizio_prova.get("materia", ""),
+                                                risposta=esercizio_prova.get("risposta", "")
+                                            )
+                                esercizi.append(esercizio)
+                                m_count += 1
                         
-                    elif n_base >= b_count:
-                        if dati_esercizio.get("difficoltà",{}).get("livello") == "base":
-                            esercizio = Esercizio(
-                                            tematica=dati_esercizio.get("tematica", ""),
-                                            testo=dati_esercizio.get("testo", ""),
-                                            argomento=Argomento(**dati_esercizio.get("argomento", {})),
-                                            difficolta=Difficolta(**dati_esercizio.get("difficolta", {})),
-                                            materia=dati_esercizio.get("materia", ""),
-                                            risposta=dati_esercizio.get("risposta", "")
-                                        )
-                            esercizi.append(esercizio)
-                            b_count += 1  
+                        elif n_base >= b_count:
+                            if esercizio_prova.get("difficoltà",{}).get("livello") == "base":
+                                esercizio = Esercizio(
+                                                tematica=esercizio_prova.get("tematica", ""),
+                                                testo=esercizio_prova.get("testo", ""),
+                                                argomento=Argomento(**esercizio_prova.get("argomento", {})),
+                                                difficolta=Difficolta(**esercizio_prova.get("difficolta", {})),
+                                                materia=esercizio_prova.get("materia", ""),
+                                                risposta=esercizio_prova.get("risposta", "")
+                                            )
+                                esercizi.append(esercizio)
+                                b_count += 1    
+                    
 
-    for _ in range(n_teoria):
-        if dati_esercizio.get("difficoltà",{}).get("tipologia") == "teoria":
-            if dati_esercizio.get("tematica") == tematica:
-                if dati_esercizio.get("argomento", {}).get("sottotematica") == sottotematica:
+    for esercizio_prova in dati_esercizio[:n_esercizi]:
+        if esercizio_prova.get("difficoltà",{}).get("tipologia") == "problema":
+            if esercizio_prova.get("tematica") == tematica:
+                if esercizio_prova.get("argomento", {}).get("sottotematica") == sottotematica:
                     if n_avanzati >= a_count:
-                        if dati_esercizio.get("difficoltà",{}).get("livello") == "avanzati":
+                        if esercizio_prova.get("difficoltà",{}).get("livello") == "avanzati":
                             esercizio = Esercizio(
-                                            tematica=dati_esercizio.get("tematica", ""),
-                                            testo=dati_esercizio.get("testo", ""),
-                                            argomento=Argomento(**dati_esercizio.get("argomento", {})),
-                                            difficolta=Difficolta(**dati_esercizio.get("difficolta", {})),
-                                            materia=dati_esercizio.get("materia", ""),
-                                            risposta=dati_esercizio.get("risposta", "")
+                                            tematica=esercizio_prova.get("tematica", ""),
+                                            testo=esercizio_prova.get("testo", ""),
+                                            argomento=Argomento(**esercizio_prova.get("argomento", {})),
+                                            difficolta=Difficolta(**esercizio_prova.get("difficolta", {})),
+                                            materia=esercizio_prova.get("materia", ""),
+                                            risposta=esercizio_prova.get("risposta", "")
                                         )
                             esercizi.append(esercizio)
                             a_count += 1
                                         
                     elif n_medi >= m_count:
-                        if dati_esercizio.get("difficoltà",{}).get("livello") == "medi":
+                        if esercizio_prova.get("difficoltà",{}).get("livello") == "medi":
                             esercizio = Esercizio(
-                                            tematica=dati_esercizio.get("tematica", ""),
-                                            testo=dati_esercizio.get("testo", ""),
-                                            argomento=Argomento(**dati_esercizio.get("argomento", {})),
-                                            difficolta=Difficolta(**dati_esercizio.get("difficolta", {})),
-                                            materia=dati_esercizio.get("materia", ""),
-                                            risposta=dati_esercizio.get("risposta", "")
+                                            tematica=esercizio_prova.get("tematica", ""),
+                                            testo=esercizio_prova.get("testo", ""),
+                                            argomento=Argomento(**esercizio_prova.get("argomento", {})),
+                                            difficolta=Difficolta(**esercizio_prova.get("difficolta", {})),
+                                            materia=esercizio_prova.get("materia", ""),
+                                            risposta=esercizio_prova.get("risposta", "")
                                         )
                             esercizi.append(esercizio)
                             m_count += 1
-                    
+                            
                     elif n_base >= b_count:
-                        if dati_esercizio.get("difficoltà",{}).get("livello") == "base":
+                        if esercizio_prova.get("difficoltà",{}).get("livello") == "base":
                             esercizio = Esercizio(
-                                            tematica=dati_esercizio.get("tematica", ""),
-                                            testo=dati_esercizio.get("testo", ""),
-                                            argomento=Argomento(**dati_esercizio.get("argomento", {})),
-                                            difficolta=Difficolta(**dati_esercizio.get("difficolta", {})),
-                                            materia=dati_esercizio.get("materia", ""),
-                                            risposta=dati_esercizio.get("risposta", "")
+                                            tematica=esercizio_prova.get("tematica", ""),
+                                            testo=esercizio_prova.get("testo", ""),
+                                            argomento=Argomento(**esercizio_prova.get("argomento", {})),
+                                            difficolta=Difficolta(**esercizio_prova.get("difficolta", {})),
+                                            materia=esercizio_prova.get("materia", ""),
+                                            risposta=esercizio_prova.get("risposta", "")
                                         )
                             esercizi.append(esercizio)
                             b_count += 1  
 
-    for _ in range(n_definizioni):
-        if dati_esercizio.get("difficoltà",{}).get("tipologia") == "definizione":
-            if dati_esercizio.get("tematica") == tematica:
-                if dati_esercizio.get("argomento", {}).get("sottotematica") == sottotematica:
-                    if n_avanzati >= a_count:
-                        if dati_esercizio.get("difficoltà",{}).get("livello") == "avanzati":
-                            esercizio = Esercizio(
-                                            tematica=dati_esercizio.get("tematica", ""),
-                                            testo=dati_esercizio.get("testo", ""),
-                                            argomento=Argomento(**dati_esercizio.get("argomento", {})),
-                                            difficolta=Difficolta(**dati_esercizio.get("difficolta", {})),
-                                            materia=dati_esercizio.get("materia", ""),
-                                            risposta=dati_esercizio.get("risposta", "")
-                                        )
-                            esercizi.append(esercizio)
-                            a_count += 1
-                                        
-                    elif n_medi >= m_count:
-                        if dati_esercizio.get("difficoltà",{}).get("livello") == "medi":
-                            esercizio = Esercizio(
-                                            tematica=dati_esercizio.get("tematica", ""),
-                                            testo=dati_esercizio.get("testo", ""),
-                                            argomento=Argomento(**dati_esercizio.get("argomento", {})),
-                                            difficolta=Difficolta(**dati_esercizio.get("difficolta", {})),
-                                            materia=dati_esercizio.get("materia", ""),
-                                            risposta=dati_esercizio.get("risposta", "")
-                                        )
-                            esercizi.append(esercizio)
-                            m_count += 1
-                    
-                    elif n_base >= b_count:
-                        if dati_esercizio.get("difficoltà",{}).get("livello") == "base":
-                            esercizio = Esercizio(
-                                            tematica=dati_esercizio.get("tematica", ""),
-                                            testo=dati_esercizio.get("testo", ""),
-                                            argomento=Argomento(**dati_esercizio.get("argomento", {})),
-                                            difficolta=Difficolta(**dati_esercizio.get("difficolta", {})),
-                                            materia=dati_esercizio.get("materia", ""),
-                                            risposta=dati_esercizio.get("risposta", "")
-                                        )
-                            esercizi.append(esercizio)
-                            b_count += 1 
+    for esercizio_prova in dati_esercizio[:n_esercizi]:
+            if esercizio_prova.get("difficoltà",{}).get("tipologia") == "teoria":
+                if esercizio_prova.get("tematica") == tematica:
+                    if esercizio_prova.get("argomento", {}).get("sottotematica") == sottotematica:
+                        if n_avanzati >= a_count:
+                            if esercizio_prova.get("difficoltà",{}).get("livello") == "avanzati":
+                                esercizio = Esercizio(
+                                                tematica=esercizio_prova.get("tematica", ""),
+                                                testo=esercizio_prova.get("testo", ""),
+                                                argomento=Argomento(**esercizio_prova.get("argomento", {})),
+                                                difficolta=Difficolta(**esercizio_prova.get("difficolta", {})),
+                                                materia=esercizio_prova.get("materia", ""),
+                                                risposta=esercizio_prova.get("risposta", "")
+                                            )
+                                esercizi.append(esercizio)
+                                a_count += 1
+                                            
+                        elif n_medi >= m_count:
+                            if esercizio_prova.get("difficoltà",{}).get("livello") == "medi":
+                                esercizio = Esercizio(
+                                                tematica=esercizio_prova.get("tematica", ""),
+                                                testo=esercizio_prova.get("testo", ""),
+                                                argomento=Argomento(**esercizio_prova.get("argomento", {})),
+                                                difficolta=Difficolta(**esercizio_prova.get("difficolta", {})),
+                                                materia=esercizio_prova.get("materia", ""),
+                                                risposta=esercizio_prova.get("risposta", "")
+                                            )
+                                esercizi.append(esercizio)
+                                m_count += 1
+                        
+                        elif n_base >= b_count:
+                            if esercizio_prova.get("difficoltà",{}).get("livello") == "base":
+                                esercizio = Esercizio(
+                                                tematica=esercizio_prova.get("tematica", ""),
+                                                testo=esercizio_prova.get("testo", ""),
+                                                argomento=Argomento(**esercizio_prova.get("argomento", {})),
+                                                difficolta=Difficolta(**esercizio_prova.get("difficolta", {})),
+                                                materia=esercizio_prova.get("materia", ""),
+                                                risposta=esercizio_prova.get("risposta", "")
+                                            )
+                                esercizi.append(esercizio)
+                                b_count += 1  
+
+    for esercizio_prova in dati_esercizio[:n_esercizi]:
+            if esercizio_prova.get("difficoltà",{}).get("tipologia") == "definizione":
+                if esercizio_prova.get("tematica") == tematica:
+                    if esercizio_prova.get("argomento", {}).get("sottotematica") == sottotematica:
+                        if n_avanzati >= a_count:
+                            if esercizio_prova.get("difficoltà",{}).get("livello") == "avanzati":
+                                esercizio = Esercizio(
+                                                tematica=esercizio_prova.get("tematica", ""),
+                                                testo=esercizio_prova.get("testo", ""),
+                                                argomento=Argomento(**esercizio_prova.get("argomento", {})),
+                                                difficolta=Difficolta(**esercizio_prova.get("difficolta", {})),
+                                                materia=esercizio_prova.get("materia", ""),
+                                                risposta=esercizio_prova.get("risposta", "")
+                                            )
+                                esercizi.append(esercizio)
+                                a_count += 1
+                                            
+                        elif n_medi >= m_count:
+                            if esercizio_prova.get("difficoltà",{}).get("livello") == "medi":
+                                esercizio = Esercizio(
+                                                tematica=esercizio_prova.get("tematica", ""),
+                                                testo=esercizio_prova.get("testo", ""),
+                                                argomento=Argomento(**esercizio_prova.get("argomento", {})),
+                                                difficolta=Difficolta(**esercizio_prova.get("difficolta", {})),
+                                                materia=esercizio_prova.get("materia", ""),
+                                                risposta=esercizio_prova.get("risposta", "")
+                                            )
+                                esercizi.append(esercizio)
+                                m_count += 1
+                        
+                        elif n_base >= b_count:
+                            if esercizio_prova.get("difficoltà",{}).get("livello") == "base":
+                                esercizio = Esercizio(
+                                                tematica=esercizio_prova.get("tematica", ""),
+                                                testo=esercizio_prova.get("testo", ""),
+                                                argomento=Argomento(**esercizio_prova.get("argomento", {})),
+                                                difficolta=Difficolta(**esercizio_prova.get("difficolta", {})),
+                                                materia=esercizio_prova.get("materia", ""),
+                                                risposta=esercizio_prova.get("risposta", "")
+                                            )
+                                esercizi.append(esercizio)
+                                b_count += 1 
  
 
 
