@@ -1,8 +1,8 @@
 import Caricamento
-import Generazione
+import Finestra_generazione
 
 def main():
-    Generazione.Genera()
+    Finestra_generazione.Finestra_generazione()
     Caricamento.Carica()
 
 
