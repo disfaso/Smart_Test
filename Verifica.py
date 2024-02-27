@@ -1,4 +1,5 @@
 from Esercizio import Esercizio
+from typing import List
 
 class Verifica:
     
@@ -10,7 +11,7 @@ class Verifica:
     ):
         self.n_esercizi = n_esercizi
         es = Esercizio()
-        self.esercizi : Esercizio = [es] * n_esercizi
+        self.esercizi : List[Esercizio] = [es.copy() for _ in range(n_esercizi)]
 
     def aggiungi_esercizio(
             self,
@@ -20,4 +21,6 @@ class Verifica:
             if es == Esercizio():
                 es = ex
             
+    def stampa(self):
+        print(self.esercizi[0].testo)
 

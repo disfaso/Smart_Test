@@ -46,3 +46,4 @@ def Valori_esercizio(ex: Esercizio,
     ex.difficolta.tipologia = tipologia.get()
     ex.difficolta.infamia = infamia.get()
     ex.difficolta.livello = livello.get()
+

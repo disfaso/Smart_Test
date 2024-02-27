@@ -1,5 +1,6 @@
 import tkinter as tk
 from Tkinter_methods import Valida_input
+from Generazione import Genera
 
 
 
@@ -18,7 +19,7 @@ def Finestra_generazione():
     teoria.grid(row=1, column=0)
 
     valida_input_numerico = generazione.register(Valida_input)
-    teoria_in = tk.Entry(generazione, validate="key", validatecommand=(valida_input_numerico, "%P"))
+    teoria_in = tk.Entry(generazione, background="orange", validate="key", validatecommand=(valida_input_numerico, "%P"))
     teoria_in.grid(row=1, column=1)
 
 # Definizioni label e input
@@ -48,15 +49,15 @@ def Finestra_generazione():
 # Quantita di un certo livello di esercizi richiesta
     #Esercizi Base
     basilari =  tk.Label(generazione, bg="light blue", text="Numero quesiti basilari richiesti nella verifica")    
-    basilari.grid(row=6, column=0)
+    basilari.grid(row=5, column=0)
 
     valida_input_numerico = generazione.register(Valida_input)
     basilari_in = tk.Entry(generazione, validate="key", validatecommand=(valida_input_numerico, "%P"))
-    basilari_in.grid(row=6, column=1)
+    basilari_in.grid(row=5, column=1)
 
     #Esercizi Medi
     intermedi = tk.Label(generazione, bg="light blue", text="Numero quesiti intermedi richiesti nella verifica")
-    intermedi.grid(row=7, column=0)
+    intermedi.grid(row=6, column=0)
 
     valida_input_numerico = generazione.register(Valida_input)
     intermedi_in = tk.Entry(generazione, validate="key", validatecommand=(valida_input_numerico, "%P"))
@@ -70,8 +71,62 @@ def Finestra_generazione():
     avanzati_in = tk.Entry(generazione, validate="key", validatecommand=(valida_input_numerico, "%P"))
     avanzati_in.grid(row=7, column=1)
 
+    #materia
+    materia = tk.Label(generazione, bg="orange", text="Inserire la materia a cui appartiene l'esercizio")    
+    materia.grid(row=8, column=0)
 
-    button = tk.Button(generazione, text="Cliccami", command="<Button-1>")
+    materia_in = tk.Entry(generazione, validate="key")
+    materia_in.grid(row=8, column=1)
+
+    #Tematica
+    tematica = tk.Label(generazione, bg="light green", text="Inserire l'unità di apprendimento dell'esercizio")    
+    tematica.grid(row=9, column=0)
+
+    tematica_in = tk.Entry(generazione, validate="key")
+    tematica_in.grid(row=9, column=1)
+
+    #sottotematica
+    sottotematica = tk.Label(generazione, bg="orange", text="Inserire la sottotematica dell'esercizio")    
+    sottotematica.grid(row=10, column=0)
+
+    sottotematica_in = tk.Entry(generazione, validate="key")
+    sottotematica_in.grid(row=10, column=1)
+
+    def Bottone_genera():
+        m = materia_in.get()
+        t = tematica_in.get()
+        s = sottotematica_in.get()
+        n_e = esercizi_in.get()
+        n_p = problemi_in.get()
+        n_t = teoria_in.get()
+        n_d = definizioni_in.get()
+        n_a = avanzati_in.get()
+        n_m = intermedi_in.get()
+        n_b = basilari_in.get()
+        n_e = int(n_e)
+        n_p = int(n_p)
+        n_t = int(n_t)
+        n_d = int(n_d)
+        n_a = int(n_a)
+        n_m = int(n_m)
+        n_b = int(n_b)
+        
+        verifica = Genera(
+            materia = m,
+            tematica = t,
+            sottotematica = s,
+            n_esercizi = n_e,
+            n_problemi = n_p,
+            n_teoria = n_t,
+            n_definizioni = n_d,
+            n_avanzati = n_a,
+            n_medi = n_m,
+            n_base = n_b,
+        )
+        verifica.stampa()
+
+
+    button = tk.Button(generazione, text="Genera la verifica", command=Bottone_genera)
     button.grid(row=20, column=12)
 
    # message.bind("<Button-1>", drag_start)

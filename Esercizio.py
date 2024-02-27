@@ -40,5 +40,18 @@ class Esercizio:
         self.materia = materia
         self.risposta = risposta
 
+    def copy(self):
+        """
+         Creare una copia di Esercizio
+        """
+        return Esercizio(
+            tematica=self.tematica,
+            testo=self.testo,
+            argomento=self.argomento,
+            difficolta=self.difficolta,
+            materia=self.materia,
+            risposta=self.risposta
+        )
+
     
         
