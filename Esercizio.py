@@ -3,18 +3,18 @@ class Argomento:
         self, 
         oda = "", 
         sottotematica = "", 
-        trasversalità: bool = False, 
-        centralità = 1
+        trasversalita: bool = False, 
+        centralita = 1
         ):
         self.oda = oda
         self.sottotematica = sottotematica
-        self.trasversalità = trasversalità
-        self.centralità = centralità
+        self.trasversalita = trasversalita
+        self.centralita = centralita
 
-class Difficoltà:
+class Difficolta:
     def __init__(
             self, 
-            dsa = 0,
+            dsa = False,
             tipologia = "esercizio",
             infamia = 0,
             livello = "base"
@@ -30,13 +30,13 @@ class Esercizio:
                  tematica = "", 
                  testo = "", 
                  argomento= Argomento(), 
-                 difficoltà = Difficoltà(), 
+                 difficolta = Difficolta(), 
                  materia = "", 
                  risposta = ""):
         self.tematica = tematica
         self.testo = testo
         self.argomento = argomento
-        self.difficoltà = difficoltà
+        self.difficolta = difficolta
         self.materia = materia
         self.risposta = risposta
 

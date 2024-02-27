@@ -45,7 +45,7 @@ def Finestra_generazione():
     esercizi_in = tk.Entry(generazione, validate="key", validatecommand=(valida_input_numerico, "%P"))
     esercizi_in.grid(row=4, column=1)
 
-# Quantità di un certo livello di esercizi richiesta
+# Quantita di un certo livello di esercizi richiesta
     #Esercizi Base
     basilari =  tk.Label(generazione, bg="light blue", text="Numero quesiti basilari richiesti nella verifica")    
     basilari.grid(row=6, column=0)

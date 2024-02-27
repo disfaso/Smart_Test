@@ -25,8 +25,8 @@ def Valori_esercizio(ex: Esercizio,
                      testo,
                      oda,
                      sottotematica,
-                     trasversalità,
-                     centralità,
+                     trasversalita,
+                     centralita,
                      dsa,
                      tipologia,
                      infamia,
@@ -40,9 +40,9 @@ def Valori_esercizio(ex: Esercizio,
     ex.testo = testo.get()
     ex.argomento.oda = oda.get()
     ex.argomento.sottotematica = sottotematica.get()
-    ex.argomento.trasversalità = trasversalità
-    ex. argomento.centralità = centralità.get()
-    ex.difficoltà.dsa = dsa
-    ex.difficoltà.tipologia = tipologia.get()
-    ex.difficoltà.infamia = infamia.get()
-    ex.difficoltà.livello = livello.get()
+    ex.argomento.trasversalita = trasversalita.get()
+    ex.argomento.centralita = centralita.get()
+    ex.difficolta.dsa = dsa.get()
+    ex.difficolta.tipologia = tipologia.get()
+    ex.difficolta.infamia = infamia.get()
+    ex.difficolta.livello = livello.get()

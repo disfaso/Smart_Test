@@ -10,17 +10,21 @@ def Creazione_dati(es: Esercizio):
 	    "argomento" : {
                         "oda" : es.argomento.oda,
                         "sottotematica" : es.argomento.sottotematica,
-                        "trasversalità" : es.argomento.trasversalità,
-                        "centralità" : es.argomento.centralità,
+                        "trasversalita" : es.argomento.trasversalita,
+                        "centralita" : es.argomento.centralita,
                     },
-        "difficoltà" : {
-                        "DSA" : es.difficoltà.dsa,
-                        "tipologia" : es.difficoltà.tipologia,
-                        "infamia" : es.difficoltà.infamia,
-                        "livello" : es.difficoltà.livello,
+        "difficolta" : {
+                        "DSA" : es.difficolta.dsa,
+                        "tipologia" : es.difficolta.tipologia,
+                        "infamia" : es.difficolta.infamia,
+                        "livello" : es.difficolta.livello,
                     }
         }
     
     organizer = str(es.materia)
     file_path = f"./Smart_Test/{organizer}_Esercizi.json"
-    json.dump(dati, open(file_path, "w"), indent=4)
+
+    with open(file_path, "a") as json_file:
+        json.dump(dati, json_file, indent=4)
+        json_file.write("\n")
+    # json.dump(dati, open(file_path, "w"), indent=4)

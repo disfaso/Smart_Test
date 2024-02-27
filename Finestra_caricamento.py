@@ -10,7 +10,7 @@ def Finestra_caricamento(es: Esercizio):
 
 #instruzioni per il caricamento
     message = tk.Label(caricamento, compound=tk.CENTER, bg="yellow", text="Trascina qui l'esercizio")
-    message.grid(row=0, column=3)
+    message.grid(row=0, column=2)
 
 #Tematica
     tematica = tk.Label(caricamento, bg="light green", text="Inserire l'unità di apprendimento dell'esercizio")    
@@ -41,24 +41,30 @@ def Finestra_caricamento(es: Esercizio):
     sottotematica_in = tk.Entry(caricamento, validate="key")
     sottotematica_in.grid(row=4, column=1)
 
-    print("sottotematica: ", sottotematica_in.get())
-
-    #trasversalità
-    trasversalità = tk.Checkbutton(caricamento, background = "light green", text="L'esercizio ha trasversalità per più materie?", variable= es.argomento.trasversalità)
-    trasversalità.grid(row=5, column=0)
-
-    #centralità
-    centralità = tk.Label(caricamento, bg="light green", text="Inserire la centralità dell'esercizio alla sua sottotematica")    
-    centralità.grid(row=6, column=0)
-
-    centralità_in = tk.Entry(caricamento, validate="key")
-    centralità_in.grid(row=6, column=1)
     
 
-#Difficoltà
+    #trasversalita
+    trasversalita = tk.BooleanVar()
+    trasversalita.set(False)
+    cb_tras = tk.Checkbutton(caricamento, background = "light green", text="L'esercizio ha trasversalità per più materie?", variable= trasversalita)
+    
+    cb_tras.grid(row=5, column=0)
+
+    #centralita
+    centralita = tk.Label(caricamento, bg="light green", text="Inserire la centralita dell'esercizio alla sua sottotematica")    
+    centralita.grid(row=6, column=0)
+
+    centralita_in = tk.Entry(caricamento, validate="key")
+    centralita_in.grid(row=6, column=1)
+    
+
+#Difficolta
     #dsa
-    dsa = tk.Checkbutton(caricamento, background = "light green", text="L'esercizio presenta difficoltà per chi soffre di disturbi specifici dell'apprendimento?", variable= es.difficoltà.dsa)
-    dsa.grid(row=12, column=0)
+    dsa = tk.BooleanVar()
+    dsa.set(False)
+    cb_dsa = tk.Checkbutton(caricamento, background = "light green", text="L'esercizio ha problemi per studenti con disturbi specifici dell'apprendimento?", variable= dsa)
+    
+    cb_dsa.grid(row=12, column=0)
 
     #tipologia
     tipologia = tk.Label(caricamento, bg="light green", text="Scegliere la tipologia dell'esercizio")    
@@ -110,9 +116,9 @@ def Finestra_caricamento(es: Esercizio):
                          testo_in, 
                          oda_in, 
                          sottotematica_in, 
-                         es.argomento.trasversalità, 
-                         centralità_in, 
-                         es.difficoltà.dsa, 
+                         trasversalita, 
+                         centralita_in, 
+                         dsa, 
                          tip_selezionata, 
                          lvl_selezionato, 
                          selezionato, 
