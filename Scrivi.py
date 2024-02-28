@@ -8,7 +8,7 @@ def cartella_controllo(cartella_path):
 
 
 
-def Scrivi_verifica_s(verifica: Verifica):
+def Scrivi_verifica_s(verifica: Verifica, classificazione: str):
     """
         Scrive verifica per studenti in un .docx
     """
@@ -34,4 +34,4 @@ def Scrivi_verifica_s(verifica: Verifica):
 
     cartella_controllo(file_path)
 
-    doc.save(f"{file_path}Verifica.docx")
+    doc.save(f"{file_path}Verifica_{classificazione}.docx")
