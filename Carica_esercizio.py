@@ -1,5 +1,21 @@
 import json
+import os
 from Esercizio import Esercizio
+
+def Append_a_file_json(file_path, new_data):
+    existing_data = []
+
+    # Leggi  il file se path esistente
+    if os.path.exists(file_path):
+        with open(file_path, "r") as json_file:
+            existing_data = json.load(json_file)
+
+    # Append il nuovo json object 
+    existing_data.append(new_data)
+
+    return existing_data
+
+    
 
 def Creazione_dati(es: Esercizio):
     dati = {
@@ -24,7 +40,30 @@ def Creazione_dati(es: Esercizio):
     organizer = str(es.materia)
     file_path = f"./Smart_Test/{organizer}_Esercizi.json"
 
-    with open(file_path, "a") as json_file:
-        json.dump(dati, json_file, indent=4)
-        json_file.write("\n")
-    # json.dump(dati, open(file_path, "w"), indent=4)
+    # controlla che il file non esista per capire se è il primo oggetto inserito
+    primo_json = not os.path.exists(file_path)
+
+
+# Se non è primo json inserito, ricrea l'intera lista e aggiungi i nuovi dati
+    if not primo_json:
+        existing_data = Append_a_file_json(file_path, dati)
+
+# Se è il primo file, assegna alla variabile existing_data il nuovo dato da inserire        
+    elif primo_json:
+        existing_data = dati
+        
+
+#riscrivere il file json
+    with open(file_path, "w") as json_file:    
+        
+        
+        
+        json.dump(existing_data, json_file, indent=4)
+
+        
+
+# scrivi json object
+        
+        
+    
+# se è la prima volta che scriviamo il file, 
