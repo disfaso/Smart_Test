@@ -1,6 +1,7 @@
 import tkinter as tk
 from Tkinter_methods import Valida_input
 from Generazione import Genera
+from Scrivi import Scrivi_verifica_s
 
 
 
@@ -110,7 +111,7 @@ def Finestra_generazione():
         n_a = int(n_a)
         n_m = int(n_m)
         n_b = int(n_b)
-        
+
         verifica = Genera(
             materia = m,
             tematica = t,
@@ -123,7 +124,7 @@ def Finestra_generazione():
             n_medi = n_m,
             n_base = n_b,
         )
-        verifica.stampa()
+        Scrivi_verifica_s(verifica=verifica)
 
 
     button = tk.Button(generazione, text="Genera la verifica", command=Bottone_genera)

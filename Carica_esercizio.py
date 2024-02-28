@@ -14,7 +14,7 @@ def Creazione_dati(es: Esercizio):
                         "centralita" : es.argomento.centralita,
                     },
         "difficolta" : {
-                        "DSA" : es.difficolta.dsa,
+                        "dsa" : es.difficolta.dsa,
                         "tipologia" : es.difficolta.tipologia,
                         "infamia" : es.difficolta.infamia,
                         "livello" : es.difficolta.livello,
