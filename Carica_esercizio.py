@@ -3,6 +3,17 @@ import os
 from Esercizio import Esercizio
 
 def Append_un_file_json(file_path, new_data):
+    """
+    Legge un file JSON esistente e aggiunge nuovi dati ad esso.
+
+    Args:
+        file_path (str): Il percorso del file JSON esistente.
+        new_data (dict): I nuovi dati da aggiungere al file.
+
+    Returns:
+        list: La lista aggiornata dei dati JSON.
+
+    """
     existing_data = []
 
     # Leggi  il file se path esistente
@@ -18,6 +29,14 @@ def Append_un_file_json(file_path, new_data):
     
 
 def Creazione_dati(es: Esercizio):
+    """
+    Crea un nuovo oggetto JSON per rappresentare i dati di un esercizio 
+    e lo aggiunge a un file JSON esistente o ne crea uno nuovo.
+
+    Args:
+        es (Esercizio): Esercizio da inserire nel file JSON.
+
+    """
     dati = {
         "tematica" : es.tematica,
         "testo" : es.testo, 
@@ -75,8 +94,3 @@ def Creazione_dati(es: Esercizio):
 
         
 
-# scrivi json object
-        
-        
-    
-# se è la prima volta che scriviamo il file, 
