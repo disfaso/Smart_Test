@@ -168,7 +168,7 @@ def Finestra_generazione():
         Finestra_home()
 
     button = tk.Button(generazione,bg="orange", text="Genera la verifica", command=Bottone_genera)
-    button.grid(row=12, column=2)
+    button.grid(row=12, column=1)
 
     home_torna = tk.Button(generazione, bg ="yellow", text="Torna alla schermata home", command=Bottone_home)
     home_torna.grid(row=12, column=0)
