@@ -2,7 +2,7 @@ import tkinter as tk
 from Tkinter_methods import Valida_input, Chiudi_finestra
 from Generazione import Genera
 from Scrivi import Scrivi_verifica_s
-from Finestra_home import Finestra_home
+
 
 
 def Finestra_generazione():
@@ -135,10 +135,11 @@ def Finestra_generazione():
         Scrivi_verifica_s(verifica=verifica, classificazione = c)
 
     def Bottone_home():
+        from Finestra_home import Finestra_home
         Chiudi_finestra(generazione)
         Finestra_home()
 
-    button = tk.Button(generazione,bg="orange" text="Genera la verifica", command=Bottone_genera)
+    button = tk.Button(generazione,bg="orange", text="Genera la verifica", command=Bottone_genera)
     button.grid(row=12, column=4)
 
     home_torna = tk.Button(generazione, bg ="yellow", text="Torna alla schermata home", command=Bottone_home)

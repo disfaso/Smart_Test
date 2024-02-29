@@ -2,7 +2,7 @@ import tkinter as tk
 from Esercizio import Esercizio
 from Tkinter_methods import Valori_esercizio, Chiudi_finestra
 from Carica_esercizio import Creazione_dati
-from Finestra_home import Finestra_home
+
 
 
 def Finestra_caricamento(es: Esercizio):
@@ -131,6 +131,7 @@ def Finestra_caricamento(es: Esercizio):
 
 
     def Bottone_home():
+        from Finestra_home import Finestra_home
         Chiudi_finestra(caricamento)
         Finestra_home()
 

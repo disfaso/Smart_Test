@@ -15,11 +15,11 @@ def Finestra_home():
 
     
 
-    def Chiama_generazione()
+    def Chiama_generazione():
         Chiudi_finestra(home)
         Finestra_generazione()
 
-    def Chiama_caricamento()
+    def Chiama_caricamento():
         Chiudi_finestra(home)
         es = Esercizio()
         Finestra_caricamento(es)
@@ -29,4 +29,6 @@ def Finestra_home():
 
     carica = tk.Button(home, bg="light green", text="Carica un esercizio", command=Chiama_caricamento)
     carica.pack()
+
+    home.mainloop()
 
