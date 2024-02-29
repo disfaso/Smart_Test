@@ -6,14 +6,36 @@ from Scrivi import Scrivi_verifica_s
 
 
 def Finestra_generazione():
+    """
+        Funzione che gestisce la GUI per la generazione delle verifiche
+
+        input gestiti dalle entrate:
+            teoria_in : numero di quesiti di tipologia 'teoria' richiesti
+            definizioni_in : numero di quesiti di tipologia 'definizione' richiesti
+            problemi_in : numero di quesiti di tipologia 'problema' richiesti
+            esercizi_in : numero di  quesiti di tipologia 'esercizi' richiesti
+
+            basilari_in : numero di esercizi di livello 'base' richiesti
+            intermedi_in : numero di esercizi di livello 'medio' richiesti
+            avanzati_in : numero di esercizi di livello 'avanzato' richiesti
+
+            tematica_in: unità di apprendimento della verifica
+            sottotematica_in: argomento specifico della verifica
+            materia_in : materia della verifica; variabile utilizzata per l'accesso ai dati e il salvataggio
+            classificazione_in : input utilizzato per distinguere verifiche diverse in fase di salvataggio
+            
+    """
     generazione = tk.Tk()
 
     generazione.title("Genera una verifica")
-    generazione.geometry('1000x800')
+    generazione.geometry('1000x400')
 
 # Create the instruction for the generation
-    message = tk.Label(generazione, compound=tk.CENTER, bg="yellow", text="Trascina qui l'quesito")
-    message.grid(row=0, column=4)
+    message = tk.Label(generazione, compound=tk.CENTER, bg="red", text="Inserisci il numero di esercizi di ogni tipologia desiderati ")
+    message.grid(row=0, column=0)
+
+    message1 = tk.Label(generazione, compound=tk.CENTER, bg="red", text="La somma degli esercizi di diverse tipologie deve essere \nuguale a quella di diverse difficoltà")
+    message1.grid(row=0, column=1)
 
 # Teoria label e input
     teoria = tk.Label(generazione, bg="orange", text="Numero quesiti di teoria")    
@@ -101,6 +123,12 @@ def Finestra_generazione():
     classificazione_in.grid(row=11, column=1)
 
     def Bottone_genera():
+        """
+            Assegna i valori di input a variabili istanziate, convertendo le str in int
+
+            Chiama funzione Scrivi_verifica_s con le variabili istanziate in input
+
+        """
         m = materia_in.get()
         t = tematica_in.get()
         s = sottotematica_in.get()
@@ -140,7 +168,7 @@ def Finestra_generazione():
         Finestra_home()
 
     button = tk.Button(generazione,bg="orange", text="Genera la verifica", command=Bottone_genera)
-    button.grid(row=12, column=4)
+    button.grid(row=12, column=2)
 
     home_torna = tk.Button(generazione, bg ="yellow", text="Torna alla schermata home", command=Bottone_home)
     home_torna.grid(row=12, column=0)
