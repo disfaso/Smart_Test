@@ -1,21 +1,19 @@
 import random as rndm
 from Esercizio import Esercizio, Argomento, Difficolta
 
-def Controlla_semi(seeds, j:int):
+def Controlla_semi(seeds, seed):
     """
-        Controlla se un numero generato casualmente è già stato utilizzato.
+    Controlla se un numero generato casualmente è già stato utilizzato.
 
-        Args:
-            seeds (list): Lista contenente i numeri generati casualmente.
-            j (int): Indice del numero corrente generato casualmente.
+    Args:
+        seeds (list): Lista contenente i numeri generati casualmente.
+        seed (int): Numero generato casualmente da controllare.
 
-        Returns:
-            bool: True se il numero generato casualmente non è stato utilizzato, altrimenti False.
-
+    Returns:
+        bool: True se il numero generato casualmente non è stato utilizzato, altrimenti False.
     """
-    for controllo in seeds[:j+1]:
-        if controllo == seeds:
-            return False
+    
+    return seed not in seeds
             
     
     return True
@@ -41,25 +39,25 @@ def Scegli_quesiti(tipologia, n_difficolta, json_data, tema, sottotema, esercizi
     
     i = 0
     j = 0
-    seeds = [0] * len(json_data)
+    seeds = [len(json_data)] * len(json_data)
     esercizi_selezionati = esercizi
 
     while i < n_difficolta:
         
         if j == len(json_data):
-            print(f"Non ho trovato un quesito classificato con i parametri indicati:\n tema: {tema}, sottotema: {sottotema}")
+            print(f"Non ho trovato un quesito classificato con i parametri indicati:\n  tipologia: {tipologia} che risponda alle richieste indicate. \n C'è una piccola possibilità che l'esercizio mi sia sfuggito, nel caso prova a rigenerare")
             break
 
         seed = rndm.randrange(len(json_data))
 
-        if Controlla_semi(seeds=seeds, j=j):
-            seeds[j - 1] = seed
+        if Controlla_semi(seeds=seeds, seed=seed):
+            seeds[j] = seed
             esercizio_prova = json_data[seed]
             
             if esercizio_prova.get("difficolta", {}).get("tipologia") == tipologia:
                 if (esercizio_prova.get("tematica") == tema and
                         esercizio_prova.get("argomento", {}).get("sottotematica") == sottotema):
-                    for index, n in n_livelli:
+                    for index, n in enumerate(n_livelli):
                         livelli=["base", "medio", "avanzato"]
                         if n < max_count[index]:
                             if esercizio_prova.get("difficolta", {}).get("livello") == livelli[index]:
@@ -75,6 +73,6 @@ def Scegli_quesiti(tipologia, n_difficolta, json_data, tema, sottotema, esercizi
                                 n_livelli[index] += 1
                                 i += 1
                 
-                j += 1
+            j += 1
 
     return esercizi_selezionati, n_livelli

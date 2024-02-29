@@ -31,9 +31,9 @@ def Genera(
 
     #variabili per randomizzazione
     
-    filepath = f"./Smart_Test/{materia}_Esercizi.json"
+    # filepath = f"./Smart_Test/{materia}_Esercizi.json"
     ## filepath for debugging
-    # filepath = f"./{materia}_Esercizi.json"
+    filepath = f"./{materia}_Esercizi.json"
     try:
         with open(filepath, "r") as file:
             # dati = file.readlines()

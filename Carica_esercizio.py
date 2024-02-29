@@ -38,10 +38,10 @@ def Creazione_dati(es: Esercizio):
         }
     
     organizer = str(es.materia)
-    # file_path = f"./Smart_Test/{organizer}_Esercizi.json"
+    file_path = f"./Smart_Test/{organizer}_Esercizi.json"
 
     #debugging file_path 
-    file_path = f"./{organizer}_Esercizi.json"
+    # file_path = f"./{organizer}_Esercizi.json"
 
     # controlla che il file non esista per capire se è il primo oggetto inserito
     primo_json = not os.path.exists(file_path)
