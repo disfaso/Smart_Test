@@ -5,6 +5,13 @@ from Finestra_caricamento import Finestra_caricamento
 from Finestra_generazione import Finestra_generazione
 from Tkinter_methods import Chiudi_finestra
 def Finestra_home():
+    """
+    Apre una finestra principale per il programma,
+    Permette di scegliere tra la generazione di una verifica e il caricamento di un esercizio.
+
+    Returns:
+        None
+    """
     home = tk.Tk()
 
     home.title("home")
@@ -16,10 +23,22 @@ def Finestra_home():
     
 
     def Chiama_generazione():
+        """
+        Chiude la finestra principale e apre la finestra per la generazione di una verifica.
+
+        Returns:
+            None
+        """
         Chiudi_finestra(home)
         Finestra_generazione()
 
     def Chiama_caricamento():
+        """
+        Chiude la finestra principale e apre la finestra per il caricamento di un esercizio su un file json.
+
+        Returns:
+            None
+        """
         Chiudi_finestra(home)
         es = Esercizio()
         Finestra_caricamento(es)
