@@ -1,4 +1,13 @@
 class Argomento:
+    """
+        Inizializza un oggetto Argomento
+
+        Args:
+            oda (str): Descrizione del ODA (Obiettivo di Apprendimento).
+            sottotematica (str): Descrizione dell'argomento specifico dell'esercizio'.
+            trasversalita (bool): Indica se l'argomento è trasversale.
+            centralita (int): Valore di centralità dell'argomento rispetto alla sua unità.
+        """
     def __init__(
         self, 
         oda = "", 
