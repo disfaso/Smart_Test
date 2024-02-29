@@ -132,7 +132,7 @@ def Finestra_caricamento(es: Esercizio):
 
     def Bottone_home():
         Chiudi_finestra(caricamento)
-        Finestra_home
+        Finestra_home()
 
 
 #bottone per fissare i valori alla variabile esercizio e chiamare il json
