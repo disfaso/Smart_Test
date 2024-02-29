@@ -1,7 +1,10 @@
 import tkinter as tk
 from Esercizio import Esercizio
-from Tkinter_methods import Valori_esercizio
+from Tkinter_methods import Valori_esercizio, Chiudi_finestra
 from Carica_esercizio import Creazione_dati
+from Finestra_home import Finestra_home
+
+
 def Finestra_caricamento(es: Esercizio):
     caricamento = tk.Tk()
 
@@ -126,10 +129,19 @@ def Finestra_caricamento(es: Esercizio):
                          risposta_in)
         Creazione_dati(es=es)
 
+
+    def Bottone_home():
+        Chiudi_finestra(caricamento)
+        Finestra_home
+
+
 #bottone per fissare i valori alla variabile esercizio e chiamare il json
-    valori_esercizio = tk.Button(caricamento, text="Carica l'esercizio", command=Bottone_carica)
+    valori_esercizio = tk.Button(caricamento, bg="light green", text="Carica l'esercizio", command=Bottone_carica)
     valori_esercizio.grid(row=13, column=2)
     
+
+    home_torna = tk.Button(caricamento, bg ="yellow", text="Torna alla schermata home", command=Bottone_home)
+    home_torna.grid(row=13, column=0)
    # get_option_button = tk.Button(root, text="Get Option", command=option_selected)
 #    get_option_button.pack(pady=5)
    # message.bind("<Button-1>", drag_start)
