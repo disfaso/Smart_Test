@@ -47,3 +47,5 @@ def Valori_esercizio(ex: Esercizio,
     ex.difficolta.infamia = infamia.get()
     ex.difficolta.livello = livello.get()
 
+def close_window(root):
+        root.destroy()
