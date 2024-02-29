@@ -21,28 +21,28 @@ def Controlla_semi(seeds, j:int):
     return True
 
 
-def Scegli_quesiti(tipologia, n_difficolta, json_data, tema, sottotema, esercizi, max_count):
+def Scegli_quesiti(tipologia, n_difficolta, json_data, tema, sottotema, esercizi, max_count, n_livelli):
     """
-        Seleziona e aggiunge quesiti alla lista degli esercizi in base ai parametri specificati.
+            Seleziona e aggiunge quesiti alla lista degli esercizi in base ai parametri specificati.
 
-        Args:
-            tipologia (str): La tipologia di quesito da selezionare.
-            n_difficolta (int): Il numero totale di quesiti da selezionare.
-            json_data (list): Lista contenente i dati dei quesiti in formato JSON.
-            tema (str): Il tema principale dei quesiti da selezionare.
-            sottotema (str): Il sottotema dei quesiti da selezionare.
-            esercizi (list): Lista degli esercizi a cui aggiungere i quesiti selezionati.
-            max_count (list): Lista contenente il numero massimo di quesiti per ogni livello di difficoltà.
+    Args:
+        tipologia (str): La tipologia di quesito da selezionare.
+        n_difficolta (int): Il numero totale di quesiti da selezionare.
+        json_data (list): Lista contenente i dati dei quesiti in formato JSON.
+        tema (str): Il tema principale dei quesiti da selezionare.
+        sottotema (str): Il sottotema dei quesiti da selezionare.
+        esercizi (list): Lista degli esercizi a cui aggiungere i quesiti selezionati.
+        max_count (list): Lista contenente il numero massimo di quesiti per ogni livello di difficoltà.
+        n_livelli (list): Lista contenente il numero di quesiti selezionati per ogni livello di difficoltà.
 
-        Returns:
-            list: La lista aggiornata degli esercizi con i quesiti selezionati.
-
+    Returns:
+        tuple: Una tupla contenente la lista aggiornata degli esercizi con i quesiti selezionati e il numero di quesiti selezionati per ogni livello di difficoltà.
     """
-    global n_livelli
     
     i = 0
     j = 0
     seeds = [0] * len(json_data)
+    esercizi_selezionati = esercizi
 
     while i < n_difficolta:
         
@@ -71,10 +71,10 @@ def Scegli_quesiti(tipologia, n_difficolta, json_data, tema, sottotema, esercizi
                                     materia=esercizio_prova.get("materia", ""),
                                     risposta=esercizio_prova.get("risposta", "")
                                 )
-                                esercizi.append(esercizio)
+                                esercizi_selezionati.append(esercizio)
                                 n_livelli[index] += 1
                                 i += 1
                 
                 j += 1
 
-    return esercizi
+    return esercizi_selezionati, n_livelli
