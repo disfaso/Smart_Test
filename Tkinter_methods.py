@@ -2,17 +2,44 @@ from tkinter import messagebox
 from Esercizio import Esercizio
 
 def drag_start(event):
+    """
+    Inizia il trascinamento dell'oggetto quando viene premuto il pulsante del mouse.
+
+    Args:
+        event: L'evento del mouse che ha attivato la funzione.
+
+    Returns:
+        None
+    """
     widget = event.widget
     widget.startX = event.x
     widget.startY = event.y
 
 def drag_motion(event):
+    """
+    Gestisce il movimento dell'oggetto durante il trascinamento del mouse.
+
+    Args:
+        event: L'evento del mouse che ha attivato la funzione.
+
+    Returns:
+        None
+    """
     widget = event.widget
     x = widget.winfo_x() - widget.startX + event.x
     y = widget.winfo_y() - widget.startY + event.y
     widget.place(x=x, y=y)
 
 def Valida_input(testo):
+    """
+    Verifica se l'input è valido.
+
+    Args:
+        testo (str): Il testo da validare.
+
+    Returns:
+        bool: True se l'input è valido, altrimenti False.
+    """
     if testo.isdigit() or testo == "":
         return True
     else:
@@ -34,6 +61,27 @@ def Valori_esercizio(ex: Esercizio,
                      materia,
                      risposta
                      ):
+    """
+    Aggiorna i valori di un oggetto Esercizio con i valori forniti.
+
+    Args:
+        ex (Esercizio): L'oggetto Esercizio da aggiornare.
+        tematica (str): La tematica dell'esercizio.
+        testo (str): Il testo dell'esercizio.
+        oda (str): Gli obiettivi di apprendimento dell'esercizio.
+        sottotematica (str): La sottotematica dell'esercizio.
+        trasversalita (bool): Indica se l'esercizio ha trasversalità per più materie.
+        centralita (int): La centralità dell'esercizio alla sua sottotematica.
+        dsa (bool): Indica se l'esercizio è adatto per studenti con disturbi specifici dell'apprendimento.
+        tipologia (str): La tipologia dell'esercizio.
+        infamia (int): Il livello di infamia dell'esercizio.
+        livello (str): Il livello di difficoltà dell'esercizio.
+        materia (str): La materia a cui appartiene l'esercizio.
+        risposta (str): La risposta corretta dell'esercizio.
+
+    Returns:
+        None
+    """
     ex.materia = materia.get()
     ex.risposta = risposta.get()
     ex.tematica = tematica.get()
