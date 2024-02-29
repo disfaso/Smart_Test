@@ -21,6 +21,16 @@ class Argomento:
         self.centralita = centralita
 
 class Difficolta:
+    """
+        Inizializza un oggetto Difficolta con i parametri specificati.
+
+        Args:
+            dsa (bool): Indica se l'esercizio risulta problematico per studenti con DSA (disturbi specifici dell'apprendimento).
+            tipologia (str): Tipologia del quesito: può assumere valori: problema, esercizio, teoria, definizione
+            infamia (int): Valore di infamia dell'esercizio.
+            livello (str): Livello di difficoltà dell'esercizio, valori possibili: base, medio, avanzato
+        """
+
     def __init__(
             self, 
             dsa = False,
@@ -42,6 +52,17 @@ class Esercizio:
                  difficolta = Difficolta(), 
                  materia = "", 
                  risposta = ""):
+        """
+        Inizializza un oggetto Esercizio con i parametri specificati.
+
+        Args:
+            tematica (str): Tematica dell'esercizio.
+            testo (str): Testo dell'esercizio.
+            argomento (Argomento): Oggetto Argomento associato all'esercizio.
+            difficolta (Difficolta): Oggetto Difficolta associato all'esercizio.
+            materia (str): Materia dell'esercizio.
+            risposta (str): Risposta dell'esercizio.
+        """
         self.tematica = tematica
         self.testo = testo
         self.argomento = argomento
@@ -51,7 +72,10 @@ class Esercizio:
 
     def copy(self):
         """
-         Creare una copia di Esercizio
+        Crea una copia dell'oggetto Esercizio.
+
+        Returns:
+            Esercizio: Una copia dell'oggetto Esercizio.
         """
         return Esercizio(
             tematica=self.tematica,
