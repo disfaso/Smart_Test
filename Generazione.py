@@ -17,6 +17,34 @@ def Genera(
         n_medi:int,
         n_avanzati:int
            ):
+    """
+    Genera una verifica scelta da un file su cui si sono precedentemente caricati gli esercizi,
+    Gli esercizi sono scelti a random, ma la verifica deve soddisfare questi requisiti:
+    si possono scegliere quanti quesiti si vuole che siano classificati come 
+        problema, esercizio, teoria, definizione
+
+    oppure che siano di livello
+        basilare, intermedio, avanzato.
+
+    La funzione non offre una scelta sulla combinazione tra i due
+
+
+    Args:
+        materia (str): Il nome della materia per cui generare la verifica.
+        tematica: L'unità didattica della verifica.
+        sottotematica: L'argomento specifico della verifica.
+        n_esercizi (int): Il numero di esercizi da includere nella verifica.
+        n_problemi (int): Il numero di problemi da includere nella verifica.
+        n_definizioni (int): Il numero di definizioni da includere nella verifica.
+        n_teoria (int): Il numero di domande teoriche da includere nella verifica.
+        n_base (int): Il numero massimo di esercizi di base da selezionare.
+        n_medi (int): Il numero massimo di esercizi medi da selezionare.
+        n_avanzati (int): Il numero massimo di esercizi avanzati da selezionare.
+
+    Returns:
+        Verifica: La verifica generata con gli esercizi selezionati.
+
+    """
     
     # creating counters for the difficulty of exercises
     b_count = 0
@@ -29,11 +57,11 @@ def Genera(
     n_quesiti = n_esercizi + n_problemi + n_teoria + n_definizioni
     verifica = Verifica(n_quesiti)
 
-    #variabili per randomizzazione
     
-    # filepath = f"./Smart_Test/{materia}_Esercizi.json"
+    
+    filepath = f"./Smart_Test/{materia}_Esercizi.json"
     ## filepath for debugging
-    filepath = f"./{materia}_Esercizi.json"
+    # filepath = f"./{materia}_Esercizi.json"
     try:
         with open(filepath, "r") as file:
             # dati = file.readlines()
