@@ -3,6 +3,15 @@ from Verifica import Verifica
 import os
 
 def cartella_controllo(cartella_path):
+    """
+    Crea una cartella se non esiste già.
+
+    Args:
+        cartella_path (str): Il percorso della cartella da controllare/creare.
+
+    Returns:
+        None
+    """
     if not os.path.exists(cartella_path):
         os.makedirs(cartella_path)
 
@@ -10,7 +19,14 @@ def cartella_controllo(cartella_path):
 
 def Scrivi_verifica_s(verifica: Verifica, classificazione: str):
     """
-        Scrive verifica per studenti in un .docx
+    Scrive una verifica per studenti in un file .docx.
+
+    Args:
+        verifica (Verifica): Oggetto Verifica contenente gli esercizi della verifica.
+        classificazione (str): La classificazione della verifica.
+
+    Returns:
+        None
     """
     tematica = verifica.esercizi[0].tematica
     sottotematica = verifica.esercizi[0].argomento.sottotematica
