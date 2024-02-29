@@ -1,9 +1,7 @@
-import Caricamento
-import Finestra_generazione
+import Finestra_home
 
 def main():
-    Finestra_generazione.Finestra_generazione()
-    Caricamento.Carica()
+    Finestra_home.Finestra_home()
 
 
 if __name__ == "__main__":
