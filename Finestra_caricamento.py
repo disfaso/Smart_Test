@@ -6,6 +6,15 @@ from Carica_esercizio import Creazione_dati
 
 
 def Finestra_caricamento(es: Esercizio):
+    """
+    Apre una finestra di caricamento per aggiungere un nuovo esercizio.
+
+    Args:
+        es (Esercizio): Oggetto Esercizio a cui aggiungere i dati inseriti nella finestra.
+
+    Returns:
+        None
+    """
     caricamento = tk.Tk()
 
     caricamento.title("Carica un esercizio")
@@ -114,6 +123,17 @@ def Finestra_caricamento(es: Esercizio):
     risposta_in.grid(row=11, column=1)
 
     def Bottone_carica():
+        """
+        Funzione chiamata quando il bottone di caricamento viene premuto.
+        Estrae i valori dai widget e li assegna all'oggetto Esercizio, 
+        quindi chiama la funzione Creazione_dati.
+
+        Args:
+            None
+
+        Returns:
+            None
+        """
         Valori_esercizio(es, 
                          tematica_in, 
                          testo_in, 
@@ -131,6 +151,16 @@ def Finestra_caricamento(es: Esercizio):
 
 
     def Bottone_home():
+        """
+        Funzione chiamata quando il bottone "Torna alla schermata home" viene premuto.
+        Chiude la finestra di caricamento e apre la schermata home.
+
+        Args:
+            None
+
+        Returns:
+            None
+        """
         from Finestra_home import Finestra_home
         Chiudi_finestra(caricamento)
         Finestra_home()
