@@ -1,5 +1,6 @@
 import json
 import os
+import logging
 from Esercizio import Esercizio
 
 def Append_un_file_json(file_path, new_data):
@@ -17,14 +18,25 @@ def Append_un_file_json(file_path, new_data):
     existing_data = []
 
     # Leggi  il file se path esistente
-    if os.path.exists(file_path):
-        with open(file_path, "r") as json_file:
-            existing_data = json.load(json_file)
+    try:
+        if os.path.exists(file_path):
+            with open(file_path, "r") as json_file:
+                existing_data = json.load(json_file)
+                 # Append il nuovo json object 
+                existing_data.append(new_data)
+                return existing_data
+        else:
+            raise FileNotFoundError(f"File non trovato: {file_path}")
+    except FileNotFoundError as e:
+        logging.error(f"Errore nel caricare i dati JSON: {e}")
+        return e
+    except json.JSONDecodeError as e:
+        logging.error(f"Errore di decodifica dei dati JSON: {e}")
+        return None
 
-    # Append il nuovo json object 
-    existing_data.append(new_data)
+   
 
-    return existing_data
+    
 
     
 
