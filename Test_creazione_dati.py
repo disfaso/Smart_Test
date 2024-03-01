@@ -1,6 +1,10 @@
 import unittest
 import os
-from Carica_esercizio import Creazione_dati, Append_un_file_json
+import json
+import logging
+from Carica_esercizio import Append_un_file_json
+from Generazione import Leggi_json_file
+from Tkinter_methods import Prima_lettera_maiuscola
 
 class TestFileLoading(unittest.TestCase):
     def test_append_un_file_json_success(self):
@@ -21,9 +25,83 @@ class TestFileLoading(unittest.TestCase):
         os.remove(file_path)
 
     def test_aggiungi_a_file_non_trovato(self):
+        logging.basicConfig(level=logging.DEBUG)
+
+        result = None
+        try:
+            result = Append_un_file_json('./Test/mock.json', {'key': 'value'})
+        except FileNotFoundError:
+            logging.error("File not found error caught, but not expected.")
+
+        self.assertIsNone(result, "Function should not return a result")
+        
+        
+        logging.basicConfig(level=logging.WARNING)
+
+    def test_aggiungi_a_file_non_json(self):
+        logging.basicConfig(level=logging.DEBUG)
+        with self.assertRaises(json.JSONDecodeError):
+            Append_un_file_json("./Test/not.json", {'key': 'value'})
+
+        logging.basicConfig(level=logging.WARNING)
+
+    
+    def test_lettura_file_json_conosciuto(self):
+        dato_campione = {'key' : 'value'}
+
+        filepath = "./Test/test_lettura.json"
+
+        with open(filepath, 'w') as file:
+            json.dump(dato_campione, file)
+
+        existing_data = Leggi_json_file(filepath)
+
+        self.assertEqual(existing_data, dato_campione)
+
+        os.remove(filepath)
+
+    def test_leggi_un_file_non_presente(self):
+        logging.basicConfig(level=logging.DEBUG)
         
         with self.assertRaises(FileNotFoundError):
-            Append_un_file_json('./mock.json', {'key': 'value'})
+            Leggi_json_file('./Test/mock.json')
+
+        logging.basicConfig(level=logging.WARNING)
+
+    def test_leggi_file_non_json(self):
+        logging.basicConfig(level=logging.DEBUG)
+        with self.assertRaises(json.JSONDecodeError):
+            Leggi_json_file("./Test/not.json")
+        logging.basicConfig(level=logging.WARNING)
+
+
+    def test_Prima_lettera_maiuscola_stringa_min(self):
+        
+        input_string = "hello world"
+        expected_output = "Hello world"
+        self.assertEqual(Prima_lettera_maiuscola(input_string), expected_output)
+
+    def test_Prima_lettera_maiuscola_stringa_mai(self):
+        
+        input_string = "Hello world"
+        expected_output = "Hello world"
+        self.assertEqual(Prima_lettera_maiuscola(input_string), expected_output)
+
+    def test_Prima_lettera_maiuscola_stinga_vuota(self):
+        # Test input with lowercase first letter
+        input_string = ""
+        expected_output = ""
+        self.assertEqual(Prima_lettera_maiuscola(input_string), expected_output)
+
+    def test_Prima_lettera_maiuscola_stringa_num(self):
+        # Test input with lowercase first letter
+        input_string = "123abc"
+        expected_output = "123abc"
+        self.assertEqual(Prima_lettera_maiuscola(input_string), expected_output)
+
+
+    
+
 
 
 if __name__ == '__main__':

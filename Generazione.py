@@ -6,6 +6,20 @@ from Verifica import Verifica
 from Scelta_quesiti import Scegli_quesiti
 
 def Leggi_json_file(filepath):
+    """
+    Legge i dati da un file JSON specificato.
+
+    Args:
+        filepath (str): Percorso del file JSON da leggere.
+
+    Returns:
+        dict: Dati letti dal file JSON.
+
+    Raises:
+        FileNotFoundError: Se il file specificato non esiste.
+        json.JSONDecodeError: Se si verifica un errore durante il decodifica del JSON.
+
+    """
     try:
         with open(filepath, "r") as file:
             

@@ -19,7 +19,7 @@ def Append_un_file_json(file_path, new_data):
 
     # Leggi  il file se path esistente
     try:
-        # if os.path.exists(file_path):
+        if os.path.exists(file_path):
             with open(file_path, "r") as json_file:
                 existing_data = json.load(json_file)
                  # Append il nuovo json object 

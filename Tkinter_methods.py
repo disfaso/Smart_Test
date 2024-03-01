@@ -82,7 +82,7 @@ def Valori_esercizio(ex: Esercizio,
     Returns:
         None
     """
-    ex.materia = materia.get()
+    ex.materia = Prima_lettera_maiuscola(materia.get())
     ex.risposta = risposta.get()
     ex.tematica = tematica.get()
     ex.testo = testo.get()
@@ -97,3 +97,19 @@ def Valori_esercizio(ex: Esercizio,
 
 def Chiudi_finestra(root):
         root.destroy()
+
+
+def Prima_lettera_maiuscola(s):
+    """
+    Rende maiuscola la prima lettera di una stringa se non è già in maiuscolo.
+
+    Args:
+    s (str): La stringa di input.
+
+    Returns:
+    str: La stringa modificata con la prima lettera in maiuscolo, oppure la stringa originale se la prima lettera è già in maiuscolo o la stringa è vuota.
+    """
+    if s and not s[0].isupper():
+        
+        s = s[0].upper() + s[1:]
+    return s
