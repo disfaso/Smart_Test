@@ -2,7 +2,7 @@ from docx import Document
 from Verifica import Verifica
 import os
 
-def cartella_controllo(cartella_path):
+def Cartella_controllo(cartella_path):
     """
     Crea una cartella se non esiste già.
 
@@ -48,6 +48,6 @@ def Scrivi_verifica_s(verifica: Verifica, classificazione: str):
 
         i += 1
 
-    cartella_controllo(file_path)
+    Cartella_controllo(file_path)
 
     doc.save(f"{file_path}Verifica_{classificazione}.docx")

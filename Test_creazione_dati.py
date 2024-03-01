@@ -5,6 +5,7 @@ import logging
 from Carica_esercizio import Append_un_file_json
 from Generazione import Leggi_json_file
 from Tkinter_methods import Prima_lettera_maiuscola
+from Scrivi import Cartella_controllo
 
 class TestFileLoading(unittest.TestCase):
     def test_append_un_file_json_success(self):
@@ -98,6 +99,26 @@ class TestFileLoading(unittest.TestCase):
         input_string = "123abc"
         expected_output = "123abc"
         self.assertEqual(Prima_lettera_maiuscola(input_string), expected_output)
+
+    
+    def test_crea_cartella_se_non_esiste(self):
+        test_folder_path = "./Test/test_folder"
+        
+        Cartella_controllo(test_folder_path)
+        
+        self.assertTrue(os.path.exists(test_folder_path))
+        
+        os.rmdir(test_folder_path)
+
+
+    def test_cartella_gia_esistente(self):
+        test_folder_path = "./Test/Existing_Test_Folder"
+        
+        os.makedirs(test_folder_path)
+        
+        Cartella_controllo(test_folder_path)
+        
+        self.assertTrue(os.path.exists(test_folder_path))
 
 
     
