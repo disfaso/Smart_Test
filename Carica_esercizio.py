@@ -72,7 +72,7 @@ def Creazione_dati(es: Esercizio):
     file_path = f"./Smart_Test/{organizer}_Esercizi.json"
 
     #debugging file_path 
-    # file_path = f"./{organizer}_Esercizi.json"
+    #file_path = f"./{organizer}_Esercizi.json"
 
     # controlla che il file non esista per capire se è il primo oggetto inserito
     primo_json = not os.path.exists(file_path)
@@ -82,27 +82,42 @@ def Creazione_dati(es: Esercizio):
     if not primo_json:
         existing_data = Append_un_file_json(file_path, dati)
 
+        #riscrivere il file json
+        with open(file_path, "w") as json_file:    
+            
+            json_file.write("[\n")
+            
+            index = 0
+            for data in existing_data:
+                
+
+                json.dump(data, json_file, indent=4)
+
+                if index == len(existing_data) - 1:
+                    json_file.write("\n")
+                
+                else:
+                    json_file.write(",\n")
+                
+                index += 1
+
+            json_file.write("]")
+
+
 # Se è il primo file, assegna alla variabile existing_data il nuovo dato da inserire        
     elif primo_json:
         existing_data = dati
         
-
-#riscrivere il file json
-    with open(file_path, "w") as json_file:    
-        
-        json_file.write("[\n")
-        
-        for index, data in existing_data:
-
-            json.dump(data, json_file, indent=4)
-
-            if index == len(existing_data) - 1:
-                json_file.write("\n")
+        with open(file_path, "w") as json_file:    
             
-            else:
-                json_file.write(",\n")
+            json_file.write("[\n")
+                
 
-        json_file.write("]")
+            json.dump(existing_data, json_file, indent=4)
+
+
+            json_file.write("\n]")
+
 
         
 

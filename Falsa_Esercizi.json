@@ -1,0 +1,200 @@
+[
+{
+    "tematica": "tematica_0",
+    "testo": "Testo dell'esercizio numero 1",
+    "materia": "Falsa",
+    "risposta": "Risposta esercizio 1",
+    "argomento": {
+        "oda": "oda_0",
+        "sottotematica": "sottotematica_0",
+        "trasversalita": true,
+        "centralita": "centralita_0"
+    },
+    "difficolta": {
+        "DSA": true,
+        "tipologia": "esercizio",
+        "infamia": "3",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica_0",
+    "testo": "Testo dell'esercizio numero 2",
+    "materia": "Falsa",
+    "risposta": "Risposta esercizio 2",
+    "argomento": {
+        "oda": "oda_1",
+        "sottotematica": "sottotematica_0",
+        "trasversalita": true,
+        "centralita": "centralita_1"
+    },
+    "difficolta": {
+        "DSA": true,
+        "tipologia": "esercizio",
+        "infamia": "3",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica_0",
+    "testo": "Testo dell'esercizio numero 3",
+    "materia": "Falsa",
+    "risposta": "Risposta esercizio 3",
+    "argomento": {
+        "oda": "oda_2",
+        "sottotematica": "sottotematica_0",
+        "trasversalita": true,
+        "centralita": "centralita_2"
+    },
+    "difficolta": {
+        "DSA": true,
+        "tipologia": "esercizio",
+        "infamia": "3",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica_0",
+    "testo": "Testo dell'esercizio numero 4",
+    "materia": "Falsa",
+    "risposta": "Risposta esercizio 4",
+    "argomento": {
+        "oda": "oda_3",
+        "sottotematica": "sottotematica_0",
+        "trasversalita": true,
+        "centralita": "centralita_3"
+    },
+    "difficolta": {
+        "DSA": true,
+        "tipologia": "esercizio",
+        "infamia": "3",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica_0",
+    "testo": "Testo dell'esercizio numero 5",
+    "materia": "Falsa",
+    "risposta": "Risposta esercizio 5",
+    "argomento": {
+        "oda": "oda_4",
+        "sottotematica": "sottotematica_0",
+        "trasversalita": true,
+        "centralita": "centralita_4"
+    },
+    "difficolta": {
+        "DSA": true,
+        "tipologia": "esercizio",
+        "infamia": "3",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica_0",
+    "testo": "Testo dell'esercizio numero 6",
+    "materia": "Falsa",
+    "risposta": "Risposta esercizio 6",
+    "argomento": {
+        "oda": "oda_5",
+        "sottotematica": "sottotematica_0",
+        "trasversalita": true,
+        "centralita": "centralita_5"
+    },
+    "difficolta": {
+        "DSA": true,
+        "tipologia": "esercizio",
+        "infamia": "3",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica_0",
+    "testo": "Testo dell'esercizio numero 7",
+    "materia": "Falsa",
+    "risposta": "Risposta esercizio 7",
+    "argomento": {
+        "oda": "oda_6",
+        "sottotematica": "sottotematica_0",
+        "trasversalita": true,
+        "centralita": "centralita_6"
+    },
+    "difficolta": {
+        "DSA": true,
+        "tipologia": "esercizio",
+        "infamia": "3",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica_0",
+    "testo": "Testo dell'esercizio numero 8",
+    "materia": "Falsa",
+    "risposta": "Risposta esercizio 8",
+    "argomento": {
+        "oda": "oda_7",
+        "sottotematica": "sottotematica_0",
+        "trasversalita": true,
+        "centralita": "centralita_7"
+    },
+    "difficolta": {
+        "DSA": true,
+        "tipologia": "esercizio",
+        "infamia": "3",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica_0",
+    "testo": "Testo dell'esercizio numero 9",
+    "materia": "Falsa",
+    "risposta": "Risposta esercizio 9",
+    "argomento": {
+        "oda": "oda_8",
+        "sottotematica": "sottotematica_0",
+        "trasversalita": true,
+        "centralita": "centralita_8"
+    },
+    "difficolta": {
+        "DSA": true,
+        "tipologia": "esercizio",
+        "infamia": "3",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica_0",
+    "testo": "Testo dell'esercizio numero 10",
+    "materia": "Falsa",
+    "risposta": "Risposta esercizio 10",
+    "argomento": {
+        "oda": "oda_9",
+        "sottotematica": "sottotematica_0",
+        "trasversalita": true,
+        "centralita": "centralita_9"
+    },
+    "difficolta": {
+        "DSA": true,
+        "tipologia": "esercizio",
+        "infamia": "3",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica_0",
+    "testo": "",
+    "materia": "Falsa",
+    "risposta": "dd",
+    "argomento": {
+        "oda": "",
+        "sottotematica": "sottotematica_0",
+        "trasversalita": false,
+        "centralita": "a"
+    },
+    "difficolta": {
+        "dsa": false,
+        "tipologia": "teoria",
+        "infamia": "3",
+        "livello": "avanzato"
+    }
+}
+]

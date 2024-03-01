@@ -112,7 +112,7 @@ class TestFileLoading(unittest.TestCase):
 
 
     def test_cartella_gia_esistente(self):
-        test_folder_path = "./Test/Existing_Test_Folder"
+        test_folder_path = "./Test/Existing_test_tolder"
         
         os.makedirs(test_folder_path)
         
