@@ -1,8 +1,23 @@
 import json
 import random as rndm
+import logging
 
 from Verifica import Verifica
 from Scelta_quesiti import Scegli_quesiti
+
+def Leggi_json_file(filepath):
+    try:
+        with open(filepath, "r") as file:
+            
+            dati = json.load(file)
+            return dati
+    except FileNotFoundError as e:
+        logging.error(f"Errore nel caricare i dati JSON: {e}")
+        raise e
+    except json.JSONDecodeError as e:
+        logging.error(f"Error decoding JSON: {e}")
+        raise e
+
 
 
 def Genera(
@@ -62,15 +77,8 @@ def Genera(
     filepath = f"./Smart_Test/{materia}_Esercizi.json"
     ## filepath for debugging
     # filepath = f"./{materia}_Esercizi.json"
-    try:
-        with open(filepath, "r") as file:
-            # dati = file.readlines()
-            dati_esercizio = json.load(file)
-    except FileNotFoundError:
-        print(f"File '{filepath}' not found.")
-    except json.JSONDecodeError as e:
-        print(f"Error decoding JSON: {e}")
-
+    
+    dati_esercizio = Leggi_json_file(filepath=filepath)
     
     # crea una lista dove salvare tutti gli indici degli esercizi già scritti
     esercizi = []

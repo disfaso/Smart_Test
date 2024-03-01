@@ -19,20 +19,20 @@ def Append_un_file_json(file_path, new_data):
 
     # Leggi  il file se path esistente
     try:
-        if os.path.exists(file_path):
+        # if os.path.exists(file_path):
             with open(file_path, "r") as json_file:
                 existing_data = json.load(json_file)
                  # Append il nuovo json object 
                 existing_data.append(new_data)
                 return existing_data
-        else:
-            raise FileNotFoundError(f"File non trovato: {file_path}")
+        
     except FileNotFoundError as e:
         logging.error(f"Errore nel caricare i dati JSON: {e}")
-        return e
+        raise e
+    
     except json.JSONDecodeError as e:
         logging.error(f"Errore di decodifica dei dati JSON: {e}")
-        return None
+        raise e
 
    
 
