@@ -31,10 +31,10 @@ def Finestra_generazione():
     generazione.geometry('1000x400')
 
 # Create the instruction for the generation
-    message = tk.Label(generazione, compound=tk.CENTER, bg="red", text="Inserisci il numero di esercizi di ogni tipologia desiderati ")
+    message = tk.Label(generazione, compound=tk.CENTER, bg="blue", text="Inserisci il numero di esercizi di ogni tipologia desiderati ")
     message.grid(row=0, column=0)
 
-    message1 = tk.Label(generazione, compound=tk.CENTER, bg="red", text="La somma degli esercizi di diverse tipologie deve essere \nuguale a quella di diverse difficoltà")
+    message1 = tk.Label(generazione, compound=tk.CENTER, bg="blue", text="La somma degli esercizi di diverse tipologie \ndeve essere uguale a quella di diverse difficoltà")
     message1.grid(row=0, column=1)
 
 # Teoria label e input

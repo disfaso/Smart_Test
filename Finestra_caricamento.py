@@ -21,8 +21,11 @@ def Finestra_caricamento(es: Esercizio):
     caricamento.geometry('1000x800')
 
 #instruzioni per il caricamento
-    message = tk.Label(caricamento, compound=tk.CENTER, bg="yellow", text="Trascina qui l'esercizio")
-    message.grid(row=0, column=2)
+    message1 = tk.Label(caricamento, compound=tk.CENTER, bg="blue", text="Scrivi i parametri per l'esercizio da caricare\n")
+    message1.grid(row=0, column=0)
+
+    message = tk.Label(caricamento, compound=tk.CENTER, bg="blue", text="L'unità di apprendimento e la sottotematica indicate \nsaranno parole chiave nel generare le verifiche,\n si consiglia di prestare attenzione \nalla consistenza dei termini utilizzati")
+    message.grid(row=0, column=1)
 
 #Tematica
     tematica = tk.Label(caricamento, bg="light green", text="Inserire l'unità di apprendimento dell'esercizio")    
@@ -168,7 +171,7 @@ def Finestra_caricamento(es: Esercizio):
 
 #bottone per fissare i valori alla variabile esercizio e chiamare il json
     valori_esercizio = tk.Button(caricamento, bg="light green", text="Carica l'esercizio", command=Bottone_carica)
-    valori_esercizio.grid(row=13, column=2)
+    valori_esercizio.grid(row=13, column=1)
     
 
     home_torna = tk.Button(caricamento, bg ="yellow", text="Torna alla schermata home", command=Bottone_home)
