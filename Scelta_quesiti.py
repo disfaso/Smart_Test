@@ -37,7 +37,7 @@ def Scegli_quesiti(tipologia, n_difficolta, json_data, tema, sottotema, esercizi
     
     i = 0
     j = 0
-    seeds = [len(json_data)] * len(json_data)
+    indexes = [len(json_data)] * len(json_data)
     esercizi_selezionati = esercizi
 
     while i < n_difficolta:
@@ -46,11 +46,11 @@ def Scegli_quesiti(tipologia, n_difficolta, json_data, tema, sottotema, esercizi
             print(f"Non ho trovato un quesito classificato con i parametri indicati:\n  tipologia: {tipologia} che risponda alle richieste indicate. \n C'è una piccola possibilità che l'esercizio mi sia sfuggito, nel caso prova a rigenerare")
             break
 
-        seed = rndm.randrange(len(json_data))
+        index = rndm.randrange(len(json_data))
 
-        if Controlla_semi(seeds=seeds, seed=seed):
-            seeds[j] = seed
-            esercizio_prova = json_data[seed]
+        if Controlla_semi(indexed=indexes, index=index):
+            indexes[j] = index
+            esercizio_prova = json_data[index]
             
             if not esercizio_prova.get("difficolta", {}).get("tipologia") == tipologia:
                 pass
