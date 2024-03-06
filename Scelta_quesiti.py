@@ -1,22 +1,20 @@
 import random as rndm
 from Esercizio import Esercizio, Argomento, Difficolta
 
-def Controlla_semi(seeds, seed):
+def Controlla_semi(indeces, index):
     """
     Controlla se un numero generato casualmente è già stato utilizzato.
 
     Args:
-        seeds (list): Lista contenente i numeri generati casualmente.
-        seed (int): Numero generato casualmente da controllare.
+        indeces (list): Lista contenente i numeri generati casualmente.
+        index (int): Numero generato casualmente da controllare.
 
     Returns:
         bool: True se il numero generato casualmente non è stato utilizzato, altrimenti False.
     """
     
-    return seed not in seeds
-            
-    
-    return True
+    return index not in indeces
+
 
 
 def Scegli_quesiti(tipologia, n_difficolta, json_data, tema, sottotema, esercizi, max_count, n_livelli):
