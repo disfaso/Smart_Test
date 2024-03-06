@@ -76,6 +76,7 @@ class TestFileLoading(unittest.TestCase):
         logging.basicConfig(level=logging.WARNING)
 
 
+class Formattazione_stringhe(unittest.TestCase):
     def test_Prima_lettera_maiuscola_stringa_min(self):
         
         input_string = "hello world"
