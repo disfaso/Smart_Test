@@ -101,15 +101,16 @@ def Chiudi_finestra(root):
 
 def Prima_lettera_maiuscola(s):
     """
-    Rende maiuscola la prima lettera di una stringa se non è già in maiuscolo.
+    Rende maiuscola la prima lettera di una stringa se non è già in maiuscolo e converti le altre lettere in minuscolo.
 
     Args:
-    s (str): La stringa di input.
+        s (str): La stringa di input.
 
     Returns:
-    str: La stringa modificata con la prima lettera in maiuscolo, oppure la stringa originale se la prima lettera è già in maiuscolo o la stringa è vuota.
+        str: La stringa modificata con la prima lettera in maiuscolo e le altre lettere in minuscolo, 
+        oppure la stringa originale se la prima lettera è già in maiuscolo o la stringa è vuota.
     """
-    if s and not s[0].isupper():
+    if s:
         
-        s = s[0].upper() + s[1:]
+        s = s[0].upper() + s[1:].lower()
     return s
