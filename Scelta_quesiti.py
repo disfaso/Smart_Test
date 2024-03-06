@@ -1,7 +1,7 @@
 import random as rndm
 from Esercizio import Esercizio, Argomento, Difficolta
 
-def Controlla_semi(indeces, index):
+def Controlla_semi(indexes, index):
     """
     Controlla se un numero generato casualmente è già stato utilizzato.
 
@@ -13,7 +13,7 @@ def Controlla_semi(indeces, index):
         bool: True se il numero generato casualmente non è stato utilizzato, altrimenti False.
     """
     
-    return index not in indeces
+    return index not in indexes
 
 
 
@@ -52,12 +52,15 @@ def Scegli_quesiti(tipologia, n_difficolta, json_data, tema, sottotema, esercizi
             seeds[j] = seed
             esercizio_prova = json_data[seed]
             
-            if esercizio_prova.get("difficolta", {}).get("tipologia") == tipologia:
-                if (esercizio_prova.get("tematica") == tema and
+            if not esercizio_prova.get("difficolta", {}).get("tipologia") == tipologia:
+                pass
+            elif not (esercizio_prova.get("tematica") == tema and
                         esercizio_prova.get("argomento", {}).get("sottotematica") == sottotema):
-                    for index, n in enumerate(n_livelli):
-                        livelli=["base", "medio", "avanzato"]
-                        if n < max_count[index]:
+                pass    
+            else:
+                for index, n in enumerate(n_livelli):
+                    livelli=["base", "medio", "avanzato"]
+                    if n < max_count[index]:
                             if esercizio_prova.get("difficolta", {}).get("livello") == livelli[index]:
                                 esercizio = Esercizio(
                                     tematica=esercizio_prova.get("tematica", ""),
