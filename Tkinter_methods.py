@@ -114,3 +114,20 @@ def Prima_lettera_maiuscola(s):
         
         s = s[0].upper() + s[1:].lower()
     return s
+
+def Controlla_slash(s):
+    """
+    Sostituisce tutti i caratteri '/' nella stringa con il carattere '_'.
+
+    Args:
+        s (str): La stringa di input da controllare.
+
+    Returns:
+        str: La stringa modificata con tutti i caratteri '/' sostituiti con il carattere '_'.
+    """
+    if s:
+        for l in s:
+            if l == '/':
+                l = '_'
+
+    return s
