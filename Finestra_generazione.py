@@ -1,5 +1,5 @@
 import tkinter as tk
-from Tkinter_methods import Valida_input, Chiudi_finestra, Prima_lettera_maiuscola
+from Tkinter_methods import Valida_input, Chiudi_finestra, Prima_lettera_maiuscola, Controlla_slash
 from Generazione import Genera
 from Scrivi import Scrivi_verifica_s
 
@@ -129,10 +129,10 @@ def Finestra_generazione():
             Chiama funzione Scrivi_verifica_s con le variabili istanziate in input
 
         """
-        m = Prima_lettera_maiuscola(materia_in.get())
+        m = Controlla_slash(Prima_lettera_maiuscola(materia_in.get()))
         t = tematica_in.get()
         s = sottotematica_in.get()
-        c = classificazione_in.get()
+        c = Controlla_slash(classificazione_in.get())
         n_e = esercizi_in.get()
         n_p = problemi_in.get()
         n_t = teoria_in.get()
