@@ -40,9 +40,6 @@ class Verifica:
                 self.esercizi[i] = ex
                 return
 
-            
-    def stampa(self):
-        print(self.esercizi[0].testo)
 
     def esercizio_std(self, es: Esercizio):
         """
