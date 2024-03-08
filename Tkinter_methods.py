@@ -125,9 +125,4 @@ def Controlla_slash(s):
     Returns:
         str: La stringa modificata con tutti i caratteri '/' sostituiti con il carattere '_'.
     """
-    if s:
-        for l in s:
-            if l == '/':
-                l = '_'
-
-    return s
+    return s.replace('/', '_')
