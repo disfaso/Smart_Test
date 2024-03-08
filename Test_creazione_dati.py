@@ -5,7 +5,9 @@ import logging
 from Carica_esercizio import Append_un_file_json
 from Generazione import Leggi_json_file
 from Tkinter_methods import Prima_lettera_maiuscola
-from Scrivi import Cartella_controllo
+from Scrivi import Cartella_controllo, Scrivi_verifica_s
+from Verifica import Verifica
+from Esercizio import Esercizio
 
 class TestFileLoading(unittest.TestCase):
     """
@@ -185,7 +187,41 @@ class Test_cartella_controllo(unittest.TestCase):
         self.assertTrue(os.path.exists(test_folder_path))
 
 
-    
+class TestScriviVerifica(unittest.TestCase):
+    """
+    Classe di test per la funzione Scrivi_verifica_s.
+
+    Metodi:
+        setUp(self): Prepara gli oggetti di verifica e classificazione per i test.
+        test_scrivi_verifica(self): Esegue la funzione Scrivi_verifica_s e verifica se il file .docx è stato creato correttamente.
+        tearDown(self): Pulisce i file temporanei creati durante i test.
+    """
+
+    def setUp(self):
+        """
+        Prepara gli oggetti di verifica e classificazione per i test.
+        """
+        self.verifica = Verifica()
+        self.verifica.esercizi = [Esercizio(tematica="Tematica", materia="Materia", argomento="Argomento", testo="Testo esercizio 1"),
+                                   Esercizio(tematica="Tematica", materia="Materia", argomento="Argomento", testo="Testo esercizio 2")]
+        self.classificazione = "A"
+
+    def test_scrivi_verifica(self):
+        """
+        Esegue la funzione Scrivi_verifica_s e verifica se il file .docx è stato creato correttamente.
+        """
+        Scrivi_verifica_s(self.verifica, self.classificazione)
+
+        file_path = f"./Smart_Test/Verifiche_{self.verifica.esercizi[0].materia}/Verifica_{self.classificazione}.docx"
+        self.assertTrue(os.path.exists(file_path), "Il file .docx non è stato creato")
+
+    def tearDown(self):
+        """
+        Pulisce i file temporanei creati durante i test.
+        """
+        file_path = f"./Smart_Test/Verifiche_{self.verifica.esercizi[0].materia}/Verifica_{self.classificazione}.docx"
+        if os.path.exists(file_path):
+            os.remove(file_path)
 
 
 
