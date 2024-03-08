@@ -48,7 +48,7 @@ def Scegli_quesiti(tipologia, n_difficolta, json_data, tema, sottotema, esercizi
 
         index = rndm.randrange(len(json_data))
 
-        if Controlla_semi(indexed=indexes, index=index):
+        if Controlla_semi(indexes=indexes, index=index):
             indexes[j] = index
             esercizio_prova = json_data[index]
             
