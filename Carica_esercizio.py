@@ -69,7 +69,7 @@ def Creazione_dati(es: Esercizio):
         }
     
     organizer = str(es.materia)
-    file_path = f"./Smart_Test/{organizer}_Esercizi.json"
+    file_path = f"./Smart_Test/Esercizi/{organizer}_Esercizi.json"
 
     #debugging file_path 
     #file_path = f"./{organizer}_Esercizi.json"

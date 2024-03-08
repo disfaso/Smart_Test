@@ -88,9 +88,9 @@ def Genera(
 
     
     
-    filepath = f"./Smart_Test/{materia}_Esercizi.json"
+    filepath = f"./Smart_Test/Esercizi/{materia}_Esercizi.json"
     ## filepath for debugging
-    # filepath = f"./{materia}_Esercizi.json"
+    #filepath = f"./Esercizi/{materia}_Esercizi.json"
     
     dati_esercizio = Leggi_json_file(filepath=filepath)
     

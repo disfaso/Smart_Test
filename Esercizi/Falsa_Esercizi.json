@@ -11,7 +11,7 @@
         "centralita": "centralita_0"
     },
     "difficolta": {
-        "DSA": true,
+        "dsa": true,
         "tipologia": "esercizio",
         "infamia": "3",
         "livello": "base"
@@ -29,7 +29,7 @@
         "centralita": "centralita_1"
     },
     "difficolta": {
-        "DSA": true,
+        "dsa": true,
         "tipologia": "esercizio",
         "infamia": "3",
         "livello": "base"
@@ -47,7 +47,7 @@
         "centralita": "centralita_2"
     },
     "difficolta": {
-        "DSA": true,
+        "dsa": true,
         "tipologia": "esercizio",
         "infamia": "3",
         "livello": "base"
@@ -65,7 +65,7 @@
         "centralita": "centralita_3"
     },
     "difficolta": {
-        "DSA": true,
+        "dsa": true,
         "tipologia": "esercizio",
         "infamia": "3",
         "livello": "base"
@@ -83,7 +83,7 @@
         "centralita": "centralita_4"
     },
     "difficolta": {
-        "DSA": true,
+        "dsa": true,
         "tipologia": "esercizio",
         "infamia": "3",
         "livello": "base"
@@ -101,7 +101,7 @@
         "centralita": "centralita_5"
     },
     "difficolta": {
-        "DSA": true,
+        "dsa": true,
         "tipologia": "esercizio",
         "infamia": "3",
         "livello": "base"
@@ -119,7 +119,7 @@
         "centralita": "centralita_6"
     },
     "difficolta": {
-        "DSA": true,
+        "dsa": true,
         "tipologia": "esercizio",
         "infamia": "3",
         "livello": "base"
@@ -137,7 +137,7 @@
         "centralita": "centralita_7"
     },
     "difficolta": {
-        "DSA": true,
+        "dsa": true,
         "tipologia": "esercizio",
         "infamia": "3",
         "livello": "base"
@@ -155,7 +155,7 @@
         "centralita": "centralita_8"
     },
     "difficolta": {
-        "DSA": true,
+        "dsa": true,
         "tipologia": "esercizio",
         "infamia": "3",
         "livello": "base"
@@ -173,7 +173,7 @@
         "centralita": "centralita_9"
     },
     "difficolta": {
-        "DSA": true,
+        "dsa": true,
         "tipologia": "esercizio",
         "infamia": "3",
         "livello": "base"
