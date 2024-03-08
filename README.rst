@@ -60,3 +60,4 @@ Questi esercizi sono per lo più inizializzati con parametri
     tematica: tematica_0
     sottotematica: sottotematica_0
 
+$ make html
