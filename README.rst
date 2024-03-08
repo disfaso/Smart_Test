@@ -27,16 +27,19 @@ Istruzioni di Installazione
 ========================
 1. Assicurati di avere Python installato sul tuo sistema. Smart_Test è compatibile con Python 3.6 e versioni successive.
 
-2. Scarica il repository Smart_Test sul tuo computer. Puoi farlo clonando il repository da GitHub utilizzando il comando git clone::
-    git clone https://github.com/disfaso/Smart_Test
+2. Scarica il repository Smart_Test sul tuo computer. Puoi farlo clonando il repository da GitHub utilizzando il comando git clone:
+    .. code-block:: bash
+        git clone https://github.com/disfaso/Smart_Test
 
   Oppure puoi scaricare il repository come file ZIP e estrarlo sul tuo computer.
 
-3. Installa le dipendenze del progetto eseguendo il comando::
-    pip install -r requirements.txt
+3. Installa le dipendenze del progetto eseguendo il comando:
+    .. code-block:: bash
+        pip install -r requirements.txt
 
-4. Avvia Smart_Test eseguendo il comando::
-    python Smart_Test
+4. Avvia Smart_Test eseguendo il comando:
+    .. code-block:: bash
+        python Smart_Test
 
 
 
