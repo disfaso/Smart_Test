@@ -1,7 +1,7 @@
-------------------------------
-Smart Test
-------------------------------
-============
+##############
+  Smart Test
+#############
+
 INTRODUZIONE
 ============
 Smart_Test è un'applicazione Python progettata per la creazione e la gestione 
@@ -22,25 +22,32 @@ creare una prima verifica con le caratteristiche desiderate da cui partire
 
 Per iniziare ad utilizzare Smart_Test, segui le istruzioni di installazione e configurazione riportate di seguito. Per eventuali problemi o domande, consulta la sezione di risoluzione dei problemi o contatta il team di sviluppo.
 
-========================
+
 Istruzioni di Installazione
-========================
+===========================
 1. Assicurati di avere Python installato sul tuo sistema. Smart_Test è compatibile con Python 3.6 e versioni successive.
 
 2. Scarica il repository Smart_Test sul tuo computer. Puoi farlo clonando il repository da GitHub utilizzando il comando git clone:
-    run::
+    
         git clone https://github.com/disfaso/Smart_Test
 
   Oppure puoi scaricare il repository come file ZIP e estrarlo sul tuo computer.
 
 3. Installa le dipendenze del progetto eseguendo il comando:
-    run::
+    
         pip install -r requirements.txt
 
 4. Avvia Smart_Test eseguendo il comando:
-    run::
+    
         python Smart_Test
 
+Finestra home
+==============
+La finestra home che si apre al caricamento ci permette di scegliere se caricare un esercizio o se generare una verifica
+
+.. image:: https://github.com/disfaso/Smart_Test/blob/main/finestra_home.png
+Creare un esercizio
+=====================
 
 
 Se si vogliono fare dei tentativi di generazione di verifica, 
