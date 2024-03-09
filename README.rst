@@ -14,7 +14,7 @@ Con Smart_Test, è possibile:
 - Generare verifiche personalizzate con una varietà di tipologie di esercizi in formato .docx per poter essere modificate al bisogno.
 - Salvare le verifiche generate per la gestione a lungo termine.
 - Aggiungere nuovi esercizi e argomenti al database per ampliare la varietà di contenuti disponibili.
-- Un alto livello di classificazione degli esercizi caricati, che permetta di selezionare in base a tipologia di esercizio e livello stimato
+- Un alto livello di classificazione degli esercizi caricati, che permetta di selezionare in base a tipologia di quesito e livello stimato
 
 Questo progetto è stato sviluppato con l'obiettivo di semplificare il processo di creazione 
 di verifiche, permettendo il salvataggio di esercizi ritenuti interessanti e permettendo di 
@@ -43,12 +43,27 @@ Istruzioni di Installazione
 
 Finestra home
 ==============
-La finestra home che si apre al caricamento ci permette di scegliere se caricare un esercizio o se generare una verifica
+La finestra home che si apre al caricamento ci permette di scegliere se caricare un quesito o se generare una verifica
 
 .. image:: https://github.com/disfaso/Smart_Test/blob/main/finestra_home.png
-Creare un esercizio
-=====================
 
+Creare un quesito
+=====================
+La creazione di un quesito permette di specificare i parametri con cui questo quesito sarà salvato:
+1. Unità di apprendimento, salvata nel programma come tematica
+2. Testo dell'quesito
+3. Obiettivi di apprendimento dell'quesito
+4. Sottotematica del quesito
+5. Se il quesito ha trasversalità per più materie
+6. Quanto il quesito è centrale alla sua sottotematica
+7. La tipologia di quesito, scelta tra: esercizio, problema, definizione, teoria
+8. Livello di infamia dell'esercizio
+9. Livello dell'esercizio, scelto tra: base, intermedio, avanzato
+10. Materia dell'esercizio, che verrà utilizzata in fase di salvataggio per la scelta del file a cui attingere
+11. risposta dell'esercizio
+12. Se l'esercizio risulta particolarmente problematico per studenti con disturbi specifici dell'apprendimento
+
+.. image:: https://github.com/disfaso/Smart_Test/blob/main/finestra_caricamento.png
 
 Se si vogliono fare dei tentativi di generazione di verifica, 
 si può utilizzare la materia "Falsa",
