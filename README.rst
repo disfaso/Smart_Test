@@ -89,13 +89,18 @@ della materia indicata secondo i parametri richiesti:
 
 .. image:: https://github.com/disfaso/Smart_Test/blob/main/finestra_generazione.png
 
+
+
+Per fare dei tentativi
+===========================
+
 Se si vogliono fare dei tentativi di generazione di verifica, 
-si può utilizzare la materia "Falsa",
-che prenderà esercizi da Falsa_Esercizi.json
+si può utilizzare la materia "Esempio",
+che prenderà esercizi da Esempio_Esercizi.json
 
 Questi esercizi sono per lo più inizializzati con parametri
     tipologia: esercizio
     livello: basilare
-    tematica: tematica_0
-    sottotematica: sottotematica_0
+    tematica: tematica
+    sottotematica: sottotematica
 
