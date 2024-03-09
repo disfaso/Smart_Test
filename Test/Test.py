@@ -2,12 +2,12 @@ import unittest
 import os
 import json
 import logging
-from Carica_esercizio import Append_un_file_json
-from Generazione import Leggi_json_file
-from Tkinter_methods import Prima_lettera_maiuscola
-from Scrivi import Cartella_controllo, Scrivi_verifica_s
-from Verifica import Verifica
-from Esercizio import Esercizio
+from ..Carica_esercizio import Append_un_file_json
+from ..Generazione import Leggi_json_file
+from ..Tkinter_methods import Prima_lettera_maiuscola
+from ..Scrivi import Cartella_controllo, Scrivi_verifica_s
+from ..Verifica import Verifica
+from ..Esercizio import Esercizio
 
 class TestFileLoading(unittest.TestCase):
     """
@@ -23,7 +23,7 @@ class TestFileLoading(unittest.TestCase):
         dato_atteso = {'key': 'value'}
 
         # Scrivi il dato_campione su un file temporaneo
-        file_path = './Test/test_file.json'
+        file_path = './test_file.json'
         with open(file_path, 'w') as file:
             file.write('[]')
 
@@ -165,7 +165,7 @@ class Test_cartella_controllo(unittest.TestCase):
         """
         Test per la creazione di una cartella se non esiste.
         """
-        test_folder_path = "./Test/test_folder"
+        test_folder_path = "./test_folder"
         
         Cartella_controllo(test_folder_path)
         
@@ -178,7 +178,7 @@ class Test_cartella_controllo(unittest.TestCase):
         """
         Test per la gestione di una cartella già esistente.
         """
-        test_folder_path = "./Test/Existing_test_tolder"
+        test_folder_path = "./Existing_test_folder"
         
         os.makedirs(test_folder_path)
         
