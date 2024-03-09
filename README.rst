@@ -45,7 +45,7 @@ Finestra home
 ==============
 La finestra home che si apre al caricamento ci permette di scegliere se caricare un esercizio o se generare una verifica
 
-.. image:: https://github.com/disfaso/Smart_Test/blob/main/finestra_home.png
+.. image:: finestra_home.png
 Creare un esercizio
 =====================
 
