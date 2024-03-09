@@ -50,6 +50,7 @@ La finestra home che si apre al caricamento ci permette di scegliere se caricare
 Creare un quesito
 =====================
 La creazione di un quesito permette di specificare i parametri con cui questo quesito sarà salvato:
+
 1. Unità di apprendimento, salvata nel programma come tematica
 2. Testo dell'quesito
 3. Obiettivi di apprendimento dell'quesito
@@ -58,12 +59,35 @@ La creazione di un quesito permette di specificare i parametri con cui questo qu
 6. Quanto il quesito è centrale alla sua sottotematica
 7. La tipologia di quesito, scelta tra: esercizio, problema, definizione, teoria
 8. Livello di infamia dell'esercizio
-9. Livello dell'esercizio, scelto tra: base, intermedio, avanzato
+9. Livello dell'esercizio, scelto tra: base, medio, avanzato
 10. Materia dell'esercizio, che verrà utilizzata in fase di salvataggio per la scelta del file a cui attingere
 11. risposta dell'esercizio
 12. Se l'esercizio risulta particolarmente problematico per studenti con disturbi specifici dell'apprendimento
 
 .. image:: https://github.com/disfaso/Smart_Test/blob/main/finestra_caricamento.png
+
+
+Generare una verifica
+=========================
+La generazione di una verifica permette di creare un documento docx con esercizi presi randomicamente dal database 
+della materia indicata secondo i parametri richiesti:
+1. Numero di quesiti di tipologia "teoria" richiesti
+2. Numero di quesiti di tipologia "definizione" richiesti 
+3. Numero di quesiti di tipologia "problema" richiesti
+4. Numero di quesiti di tipologia "esercizio" richiesti
+
+5. Numero di quesiti di livello "base" richiesti
+6. Numero di quesiti di livello "medio" richiesti
+7. Numero di quesiti di tipologia "avanzato" richiesti
+
+8. Materia della verifica
+9. Unità di apprendimento degli esercizi
+10. Sottotematica degli esercizi
+11. Una classificazione propria della verifica generata che 
+    permetta al file di essere salvato come file unico, distinto 
+    da altre verifiche generate
+
+.. image:: https://github.com/disfaso/Smart_Test/blob/main/finestra_generazione.png
 
 Se si vogliono fare dei tentativi di generazione di verifica, 
 si può utilizzare la materia "Falsa",
