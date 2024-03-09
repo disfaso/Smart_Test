@@ -1,14 +1,14 @@
 [
 {
-    "tematica": "tematica_0",
+    "tematica": "tematica",
     "testo": "Testo dell'esercizio numero 1",
-    "materia": "Falsa",
+    "materia": "Esempio",
     "risposta": "Risposta esercizio 1",
     "argomento": {
         "oda": "oda_0",
-        "sottotematica": "sottotematica_0",
+        "sottotematica": "sottotematica",
         "trasversalita": true,
-        "centralita": "centralita_0"
+        "centralita": "1"
     },
     "difficolta": {
         "dsa": true,
@@ -18,15 +18,15 @@
     }
 },
 {
-    "tematica": "tematica_0",
+    "tematica": "tematica",
     "testo": "Testo dell'esercizio numero 2",
-    "materia": "Falsa",
+    "materia": "Esempio",
     "risposta": "Risposta esercizio 2",
     "argomento": {
         "oda": "oda_1",
-        "sottotematica": "sottotematica_0",
+        "sottotematica": "sottotematica",
         "trasversalita": true,
-        "centralita": "centralita_1"
+        "centralita": "1"
     },
     "difficolta": {
         "dsa": true,
@@ -36,15 +36,15 @@
     }
 },
 {
-    "tematica": "tematica_0",
+    "tematica": "tematica",
     "testo": "Testo dell'esercizio numero 3",
-    "materia": "Falsa",
+    "materia": "Esempio",
     "risposta": "Risposta esercizio 3",
     "argomento": {
         "oda": "oda_2",
-        "sottotematica": "sottotematica_0",
+        "sottotematica": "sottotematica",
         "trasversalita": true,
-        "centralita": "centralita_2"
+        "centralita": "2"
     },
     "difficolta": {
         "dsa": true,
@@ -54,15 +54,15 @@
     }
 },
 {
-    "tematica": "tematica_0",
+    "tematica": "tematica",
     "testo": "Testo dell'esercizio numero 4",
-    "materia": "Falsa",
+    "materia": "Esempio",
     "risposta": "Risposta esercizio 4",
     "argomento": {
         "oda": "oda_3",
-        "sottotematica": "sottotematica_0",
+        "sottotematica": "sottotematica",
         "trasversalita": true,
-        "centralita": "centralita_3"
+        "centralita": "1"
     },
     "difficolta": {
         "dsa": true,
@@ -72,15 +72,15 @@
     }
 },
 {
-    "tematica": "tematica_0",
+    "tematica": "tematica",
     "testo": "Testo dell'esercizio numero 5",
-    "materia": "Falsa",
+    "materia": "Esempio",
     "risposta": "Risposta esercizio 5",
     "argomento": {
         "oda": "oda_4",
-        "sottotematica": "sottotematica_0",
+        "sottotematica": "sottotematica",
         "trasversalita": true,
-        "centralita": "centralita_4"
+        "centralita": "1"
     },
     "difficolta": {
         "dsa": true,
@@ -90,15 +90,15 @@
     }
 },
 {
-    "tematica": "tematica_0",
+    "tematica": "tematica",
     "testo": "Testo dell'esercizio numero 6",
-    "materia": "Falsa",
+    "materia": "Esempio",
     "risposta": "Risposta esercizio 6",
     "argomento": {
         "oda": "oda_5",
-        "sottotematica": "sottotematica_0",
+        "sottotematica": "sottotematica",
         "trasversalita": true,
-        "centralita": "centralita_5"
+        "centralita": "2"
     },
     "difficolta": {
         "dsa": true,
@@ -108,15 +108,15 @@
     }
 },
 {
-    "tematica": "tematica_0",
+    "tematica": "tematica",
     "testo": "Testo dell'esercizio numero 7",
-    "materia": "Falsa",
+    "materia": "Esempio",
     "risposta": "Risposta esercizio 7",
     "argomento": {
         "oda": "oda_6",
-        "sottotematica": "sottotematica_0",
+        "sottotematica": "sottotematica",
         "trasversalita": true,
-        "centralita": "centralita_6"
+        "centralita": "3"
     },
     "difficolta": {
         "dsa": true,
@@ -126,15 +126,15 @@
     }
 },
 {
-    "tematica": "tematica_0",
+    "tematica": "tematica",
     "testo": "Testo dell'esercizio numero 8",
-    "materia": "Falsa",
+    "materia": "Esempio",
     "risposta": "Risposta esercizio 8",
     "argomento": {
         "oda": "oda_7",
-        "sottotematica": "sottotematica_0",
+        "sottotematica": "sottotematica",
         "trasversalita": true,
-        "centralita": "centralita_7"
+        "centralita": "2"
     },
     "difficolta": {
         "dsa": true,
@@ -144,15 +144,15 @@
     }
 },
 {
-    "tematica": "tematica_0",
+    "tematica": "tematica",
     "testo": "Testo dell'esercizio numero 9",
-    "materia": "Falsa",
+    "materia": "Esempio",
     "risposta": "Risposta esercizio 9",
     "argomento": {
         "oda": "oda_8",
-        "sottotematica": "sottotematica_0",
+        "sottotematica": "sottotematica",
         "trasversalita": true,
-        "centralita": "centralita_8"
+        "centralita": "1"
     },
     "difficolta": {
         "dsa": true,
@@ -162,15 +162,15 @@
     }
 },
 {
-    "tematica": "tematica_0",
+    "tematica": "tematica",
     "testo": "Testo dell'esercizio numero 10",
-    "materia": "Falsa",
+    "materia": "Esempio",
     "risposta": "Risposta esercizio 10",
     "argomento": {
         "oda": "oda_9",
-        "sottotematica": "sottotematica_0",
+        "sottotematica": "sottotematica",
         "trasversalita": true,
-        "centralita": "centralita_9"
+        "centralita": "3"
     },
     "difficolta": {
         "dsa": true,
@@ -180,15 +180,15 @@
     }
 },
 {
-    "tematica": "tematica_0",
+    "tematica": "tematica",
     "testo": "",
-    "materia": "Falsa",
+    "materia": "Esempio",
     "risposta": "dd",
     "argomento": {
         "oda": "",
-        "sottotematica": "sottotematica_0",
+        "sottotematica": "sottotematica",
         "trasversalita": false,
-        "centralita": "a"
+        "centralita": "3"
     },
     "difficolta": {
         "dsa": false,
