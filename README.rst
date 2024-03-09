@@ -45,7 +45,8 @@ Finestra home
 ==============
 La finestra home che si apre al caricamento ci permette di scegliere se caricare un quesito o se generare una verifica
 
-.. image:: https://github.com/disfaso/Smart_Test/blob/main/finestra_home.png
+.. image:: https://github.com/disfaso/Smart_Test/blob/main/Screenshots/finestra_home.png
+    :alt: Descrizione dell'immagine
 
 Creare un quesito
 =====================
@@ -64,7 +65,7 @@ La creazione di un quesito permette di specificare i parametri con cui questo qu
 11. risposta dell'esercizio
 12. Se l'esercizio risulta particolarmente problematico per studenti con disturbi specifici dell'apprendimento
 
-.. image:: https://github.com/disfaso/Smart_Test/blob/main/finestra_caricamento.png
+.. image:: https://github.com/disfaso/Smart_Test/blob/main/Screenshots/finestra_caricamento.png
 
 
 Generare una verifica
@@ -87,7 +88,7 @@ della materia indicata secondo i parametri richiesti:
     permetta al file di essere salvato come file unico, distinto 
     da altre verifiche generate
 
-.. image:: https://github.com/disfaso/Smart_Test/blob/main/finestra_generazione.png
+.. image:: https://github.com/disfaso/Smart_Test/blob/main/Screenshots/finestra_generazione.png
 
 
 
@@ -104,3 +105,12 @@ Questi esercizi sono per lo più inizializzati con parametri
     tematica: tematica
     sottotematica: sottotematica
 
+Un'iterazione di tale genera verifica con parametri inseriti come in figura:
+
+.. image:: https://github.com/disfaso/Smart_Test/blob/main/Screenshots/esempio_generazione.png
+
+Dà come risultato una verifica che si mostra equivalente a questa:
+
+.. image:: https://github.com/disfaso/Smart_Test/blob/main/Screenshots/esempio_file.png
+
+.. image:: https://github.com/disfaso/Smart_Test/blob/main/Screenshots/esempio_verifica.png
