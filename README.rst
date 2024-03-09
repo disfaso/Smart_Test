@@ -88,7 +88,8 @@ della materia indicata secondo i parametri richiesti:
     permetta al file di essere salvato come file unico, distinto 
     da altre verifiche generate
 
-.. image:: https://github.com/disfaso/Smart_Test/blob/main/Screenshots/finestra_generazione.png
+.. image:: https://github.com/disfaso/Smart_Test/raw/main/Screenshots/finestra_home.png
+    :alt: Finestra home
 
 
 
