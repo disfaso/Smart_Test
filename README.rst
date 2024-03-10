@@ -71,6 +71,7 @@ Generare una verifica
 =========================
 La generazione di una verifica permette di creare un documento docx con esercizi presi randomicamente dal database 
 della materia indicata secondo i parametri richiesti:
+
 1. Numero di quesiti di tipologia "teoria" richiesti
 2. Numero di quesiti di tipologia "definizione" richiesti 
 3. Numero di quesiti di tipologia "problema" richiesti
@@ -103,12 +104,13 @@ si può utilizzare la materia "Esempio",
 che prenderà esercizi da Esempio_Esercizi.json
 
 Questi esercizi sono per lo più inizializzati con parametri
-    tipologia: esercizio
-    livello: basilare
-    tematica: tematica
-    sottotematica: sottotematica
 
-Un'iterazione di tale genera verifica con parametri inseriti come in figura:
+1. tipologia: esercizio
+2. livello: basilare
+3. tematica: tematica
+4. sottotematica: sottotematica
+
+La richiesta di generazione con parametri inseriti come in figura:
 
 .. image:: https://github.com/disfaso/Smart_Test/blob/main/Screenshots/esempio_generazione.png
 
