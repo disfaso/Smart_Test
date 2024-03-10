@@ -331,6 +331,39 @@ class TestGenera(unittest.TestCase):
         
         # Verifica che l'oggetto di verifica contenga il numero corretto di esercizi
         self.assertEqual(len(verifica.esercizi), n_esercizi + n_problemi + n_definizioni + n_teoria)
+        
+        e = 0
+        t = 0
+        d = 0
+        p = 0
+        b = 0
+        m = 0
+        a = 0
+
+        for esercizio in verifica.esercizi:
+            if esercizio.difficolta.tipologia == "esercizio":
+                e += 1
+            elif esercizio.difficolta.tipologia == "teoria":
+                t += 1
+            elif esercizio.difficolta.tipologia == "definizione":
+                d += 1
+            elif esercizio.difficolta.tipologia == "problema":
+                p +=1
+
+            if esercizio.difficolta.livello == "base":
+                b += 1
+            elif esercizio.difficolta.livello == "medio":
+                m += 1
+            elif esercizio.difficolta.livello == "avanzato":
+                a += 1
+
+        self.assertEqual(e, n_esercizi)
+        self.assertEqual(t, n_teoria)
+        self.assertEqual(d, n_definizioni)
+        self.assertEqual(p, n_problemi)
+        self.assertEqual(b, n_base)
+        self.assertEqual(m, n_medi)
+        self.assertEqual(a, n_avanzati)
 
     def tearDown(self):
         """
@@ -342,6 +375,6 @@ class TestGenera(unittest.TestCase):
         os.rmdir("./Smart_Test/Esercizi")
         os.rmdir("./Smart_Test/")
 
-        
+
 if __name__ == '__main__':
     unittest.main()
