@@ -109,4 +109,4 @@ def Scrivi_verifica_d(verifica: Verifica, classificazione: str):
     doc.add_heading(f"Infamia della verifica: {conteggio_infamia}")
     Cartella_controllo(file_path)
 
-    doc.save(f"{file_path}Verifica_{classificazione}.docx")
+    doc.save(f"{file_path}Verifica_docente_{classificazione}.docx")
