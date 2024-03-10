@@ -1,5 +1,5 @@
 import tkinter as tk
-from Tkinter_methods import Valida_input, Chiudi_finestra, Prima_lettera_maiuscola, Controlla_slash
+from Tkinter_methods import Valida_input, Chiudi_finestra, Prima_lettera_maiuscola, Controlla_slash, Controlla_somme
 from Generazione import Genera
 from Scrivi import Scrivi_verifica_s, Scrivi_verifica_d
 
@@ -148,6 +148,9 @@ def Finestra_generazione():
         n_m = int(n_m)
         n_b = int(n_b)
 
+        if Controlla_somme(n_e=n_e, n_p=n_p, n_t=n_t, n_d=n_d, n_b=n_b, n_m=n_m, n_a=n_a):
+            return
+        
         verifica = Genera(
             materia = m,
             tematica = t,
