@@ -98,15 +98,23 @@ def Scrivi_verifica_d(verifica: Verifica, classificazione: str):
         doc.add_heading(titolo, level=2)
 
         if esercizio.difficolta.dsa:
-            doc.add_paragraph("Quesito particolarmente complesso per studenti con disturbi specifici dell'apprendimento", level=1)
+            p_dsa = doc.add_paragraph("Quesito particolarmente complesso per studenti con disturbi specifici dell'apprendimento", level=1)
+            Colore_rosso(p_dsa)
         if esercizio.argomento.trasversalita:
-            doc.add_paragraph("Il quesito ha elementi di trasversalità con altre materie", level=1)
-        doc.add_paragraph(f"Tipologia esercizio: {tipologia}, Livello esercizio: {livello}\n Indicazioni sulla centralità del quesito rispetto all'argomento della verifica: {centralita}")
+            p_tras = doc.add_paragraph("Il quesito ha elementi di trasversalità con altre materie", level=1)
+            Colore_rosso(p_tras)
         
-        doc.add_paragraph(f"Obiettivi di apprendimento: \n{oda} \n")
+        p_car = doc.add_paragraph(f"Tipologia esercizio: {tipologia}, Livello esercizio: {livello}\n Indicazioni sulla centralità del quesito rispetto all'argomento della verifica: {centralita}")
+        Colore_rosso(p_car)
+
+        p_oda = doc.add_paragraph(f"Obiettivi di apprendimento: \n{oda} \n")
+        Colore_rosso(p_oda)
+
         doc.add_paragraph(testo)
-        doc.add_heading("Risposta", level = 2)
-        doc.add_paragraph(risposta)
+
+        doc.add_heading("Risposta", level = 2).font.color.rgb = RGBColor(255, 0, 0)
+        p_risp = doc.add_paragraph(risposta)
+        Colore_rosso(p_risp)
 
         i += 1
 
