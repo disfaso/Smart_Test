@@ -1,6 +1,7 @@
 from docx import Document
 from Verifica import Verifica
 import os
+from docx.shared import RGBColor
 
 def Cartella_controllo(cartella_path):
     """
@@ -18,7 +19,9 @@ def Cartella_controllo(cartella_path):
     else:
         pass
 
-
+def Colore_rosso(paragraph):
+    for run in paragraph.runs:
+        run.font.color.rgb = RGBColor(255, 0, 0)
 
 
 def Scrivi_verifica_s(verifica: Verifica, classificazione: str):
