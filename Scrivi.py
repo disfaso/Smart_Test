@@ -20,6 +20,7 @@ def Cartella_controllo(cartella_path):
 
 
 
+
 def Scrivi_verifica_s(verifica: Verifica, classificazione: str):
     """
     Scrive una verifica per studenti in un file .docx.
@@ -85,7 +86,7 @@ def Scrivi_verifica_d(verifica: Verifica, classificazione: str):
         oda = esercizio.argomento.oda
         tipologia = esercizio.difficolta.tipologia
         livello = esercizio.difficolta.livello
-        conteggio_infamia += esercizio.difficolta.infamia
+        conteggio_infamia += int(esercizio.difficolta.infamia)
         risposta = esercizio.risposta
         centralita = esercizio.argomento.centralita
 
@@ -93,15 +94,15 @@ def Scrivi_verifica_d(verifica: Verifica, classificazione: str):
         
         doc.add_heading(titolo, level=2)
 
-        if esercizio.difficoltà.dsa:
-            doc.add_heading("Quesito particolarmente complesso per studenti con disturbi specifici dell'apprendimento", level=3)
+        if esercizio.difficolta.dsa:
+            doc.add_paragraph("Quesito particolarmente complesso per studenti con disturbi specifici dell'apprendimento", level=1)
         if esercizio.argomento.trasversalita:
-            doc.add_heading("Il quesito ha elementi di trasversalità con altre materie")
-        doc.add_heading(f"Tipologia esercizio: {tipologia}, Livello esercizio: {livello}\n Indicazioni sulla centralità del quesito rispetto all'argomento della verifica: {centralita}")
+            doc.add_paragraph("Il quesito ha elementi di trasversalità con altre materie", level=1)
+        doc.add_paragraph(f"Tipologia esercizio: {tipologia}, Livello esercizio: {livello}\n Indicazioni sulla centralità del quesito rispetto all'argomento della verifica: {centralita}")
         
         doc.add_paragraph(f"Obiettivi di apprendimento: \n{oda} \n")
         doc.add_paragraph(testo)
-        doc.add_heading("Risposta", level = 3)
+        doc.add_heading("Risposta", level = 2)
         doc.add_paragraph(risposta)
 
         i += 1
