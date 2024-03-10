@@ -279,7 +279,7 @@ class TestScriviVerifica(unittest.TestCase):
         if os.path.exists(file_path_d):
             os.remove(file_path_d)
         
-        os.rmdir(f"./Smart_Test_Verifiche_{self.verifica.esercizi[0].materia}/")
+        os.rmdir(f"./Smart_Test/Verifiche_{self.verifica.esercizi[0].materia}/")
         
 
 class TestGenera(unittest.TestCase):
@@ -323,7 +323,7 @@ class TestGenera(unittest.TestCase):
         n_avanzati = 4
         
         # Chiama la funzione Genera con il file JSON di dati di esempio
-        verifica = Genera(materia, tematica, sottotematica, n_esercizi, n_problemi, n_definizioni, n_teoria, n_base, n_medi, n_avanzati, json_data_path="esercizi_di_prova.json")
+        verifica = Genera(materia, tematica, sottotematica, n_esercizi, n_problemi, n_definizioni, n_teoria, n_base, n_medi, n_avanzati")
         
         # Verifica che l'oggetto di verifica non sia None
         self.assertIsNotNone(verifica)
