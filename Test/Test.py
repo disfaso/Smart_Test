@@ -1,13 +1,20 @@
 import unittest
 import os
+import sys
 import json
 import logging
-from ..Carica_esercizio import Append_un_file_json
-from ..Generazione import Leggi_json_file
-from ..Tkinter_methods import Prima_lettera_maiuscola
-from ..Scrivi import Cartella_controllo, Scrivi_verifica_s
-from ..Verifica import Verifica
-from ..Esercizio import Esercizio
+
+# Add the parent directory of the current script to sys.path
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+sys.path.append(parent_dir)
+
+from Carica_esercizio import Append_un_file_json
+from Generazione import Leggi_json_file
+from Tkinter_methods import Prima_lettera_maiuscola
+from Scrivi import Cartella_controllo, Scrivi_verifica_s
+from Verifica import Verifica
+from Esercizio import Esercizio
 
 class TestFileLoading(unittest.TestCase):
     """
