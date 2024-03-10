@@ -46,7 +46,6 @@ Finestra home
 La finestra home che si apre al caricamento ci permette di scegliere se caricare un quesito o se generare una verifica
 
 .. image:: ../Screenshots/finestra_home.png
-    :alt: Finestra home
 
 Creare un quesito
 =====================
