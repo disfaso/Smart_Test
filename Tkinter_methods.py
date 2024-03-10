@@ -126,3 +126,39 @@ def Controlla_slash(s):
         str: La stringa modificata con tutti i caratteri '/' sostituiti con il carattere '_'.
     """
     return s.replace('/', '_')
+
+
+def Controlla_somme(
+        n_e,
+        n_p,
+        n_t,
+        n_d,
+        n_b,
+        n_m,
+        n_a
+):
+    """
+    Controlla che la somma dei quesiti di diverse tipologie sia uguale alla somma dei quesiti di diversi livelli.
+
+    Args:
+        n_e (int): Numero di quesiti di tipo esercizio.
+        n_p (int): Numero di quesiti di tipo problema.
+        n_t (int): Numero di quesiti di tipo teoria.
+        n_d (int): Numero di quesiti di tipo definizione.
+        n_b (int): Numero di quesiti di livello base.
+        n_m (int): Numero di quesiti di livello medio.
+        n_a (int): Numero di quesiti di livello avanzato.
+
+    Returns:
+        bool: True se le somme dei quesiti di tipologia e livello non corrispondono, False altrimenti.
+    """    
+    sum_tipologia = n_e + n_p + n_t + n_d
+    sum_livello = n_a + n_m + n_b
+
+    if sum_tipologia != sum_livello:
+        
+        messagebox.showerror("Errore", "La somma dei quesiti di diverse tipologie deve essere uguale alla somma dei quesiti di diverso livello.")
+        return True
+    
+    else:
+        return False
