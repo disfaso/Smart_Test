@@ -196,5 +196,617 @@
         "infamia": "3",
         "livello": "avanzato"
     }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 13",
+    "materia": "Esempio",
+    "risposta": "prova",
+    "argomento": {
+        "oda": "oda 13",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "4"
+    },
+    "difficolta": {
+        "dsa": false,
+        "tipologia": "definizione",
+        "infamia": "4",
+        "livello": "avanzato"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 14",
+    "materia": "Esempio",
+    "risposta": "prova 14",
+    "argomento": {
+        "oda": "oda 14",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "2"
+    },
+    "difficolta": {
+        "dsa": false,
+        "tipologia": "definizione",
+        "infamia": "4",
+        "livello": "medio"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 15",
+    "materia": "Esempio",
+    "risposta": "prova 15",
+    "argomento": {
+        "oda": "oda 15",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "5"
+    },
+    "difficolta": {
+        "dsa": false,
+        "tipologia": "definizione",
+        "infamia": "1",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 16",
+    "materia": "Esempio",
+    "risposta": "prova 16",
+    "argomento": {
+        "oda": "oda 16",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "5"
+    },
+    "difficolta": {
+        "dsa": false,
+        "tipologia": "definizione",
+        "infamia": "1",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 17",
+    "materia": "Esempio",
+    "risposta": "prova 17",
+    "argomento": {
+        "oda": "oda 17",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "2"
+    },
+    "difficolta": {
+        "dsa": false,
+        "tipologia": "problema",
+        "infamia": "2",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 18",
+    "materia": "Esempio",
+    "risposta": "prova 18",
+    "argomento": {
+        "oda": "oda 18",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "Importante da conoscere"
+    },
+    "difficolta": {
+        "dsa": false,
+        "tipologia": "problema",
+        "infamia": "3",
+        "livello": "medio"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 19",
+    "materia": "Esempio",
+    "risposta": "prova 19",
+    "argomento": {
+        "oda": "oda 19",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "3"
+    },
+    "difficolta": {
+        "dsa": true,
+        "tipologia": "problema",
+        "infamia": "2",
+        "livello": "medio"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 20",
+    "materia": "Esempio",
+    "risposta": "prova 20",
+    "argomento": {
+        "oda": "oda 20",
+        "sottotematica": "sottotematica",
+        "trasversalita": true,
+        "centralita": "3"
+    },
+    "difficolta": {
+        "dsa": false,
+        "tipologia": "problema",
+        "infamia": "4",
+        "livello": "medio"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 21",
+    "materia": "Esempio",
+    "risposta": "prova 21",
+    "argomento": {
+        "oda": "oda 21",
+        "sottotematica": "sottotematica",
+        "trasversalita": true,
+        "centralita": "3"
+    },
+    "difficolta": {
+        "dsa": false,
+        "tipologia": "problema",
+        "infamia": "666",
+        "livello": "avanzato"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 22",
+    "materia": "Esempio",
+    "risposta": "prova 22",
+    "argomento": {
+        "oda": "oda 22",
+        "sottotematica": "sottotematica",
+        "trasversalita": true,
+        "centralita": "Non molto centrale"
+    },
+    "difficolta": {
+        "dsa": true,
+        "tipologia": "problema",
+        "infamia": "3",
+        "livello": "avanzato"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 23",
+    "materia": "Esempio",
+    "risposta": "prova 23",
+    "argomento": {
+        "oda": "oda 23",
+        "sottotematica": "sottotematica",
+        "trasversalita": true,
+        "centralita": "importante per la comprensione"
+    },
+    "difficolta": {
+        "dsa": true,
+        "tipologia": "teoria",
+        "infamia": "4",
+        "livello": "avanzato"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 24",
+    "materia": "Esempio",
+    "risposta": "prova 24",
+    "argomento": {
+        "oda": "oda 24",
+        "sottotematica": "sottotematica",
+        "trasversalita": true,
+        "centralita": "3"
+    },
+    "difficolta": {
+        "dsa": true,
+        "tipologia": "teoria",
+        "infamia": "2",
+        "livello": "medio"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 25",
+    "materia": "Esempio",
+    "risposta": "prova 25",
+    "argomento": {
+        "oda": "oda 25",
+        "sottotematica": "sottotematica",
+        "trasversalita": true,
+        "centralita": "5"
+    },
+    "difficolta": {
+        "dsa": true,
+        "tipologia": "teoria",
+        "infamia": "3",
+        "livello": "medio"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 26",
+    "materia": "Esempio",
+    "risposta": "prova 26",
+    "argomento": {
+        "oda": "oda 26",
+        "sottotematica": "sottotematica",
+        "trasversalita": true,
+        "centralita": "2"
+    },
+    "difficolta": {
+        "dsa": true,
+        "tipologia": "teoria",
+        "infamia": "1",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 27",
+    "materia": "Esempio",
+    "risposta": "prova 27",
+    "argomento": {
+        "oda": "oda 27",
+        "sottotematica": "sottotematica",
+        "trasversalita": true,
+        "centralita": "Molto importante"
+    },
+    "difficolta": {
+        "dsa": true,
+        "tipologia": "teoria",
+        "infamia": "2",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 28",
+    "materia": "Esempio",
+    "risposta": "prova 28",
+    "argomento": {
+        "oda": "oda 28",
+        "sottotematica": "sottotematica",
+        "trasversalita": true,
+        "centralita": "Molto importante"
+    },
+    "difficolta": {
+        "dsa": false,
+        "tipologia": "definizione",
+        "infamia": "3",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 29",
+    "materia": "Esempio",
+    "risposta": "prova 29",
+    "argomento": {
+        "oda": "oda 29",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "2"
+    },
+    "difficolta": {
+        "dsa": true,
+        "tipologia": "definizione",
+        "infamia": "3",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 30",
+    "materia": "Esempio",
+    "risposta": "prova 30",
+    "argomento": {
+        "oda": "oda 30",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "Centrale"
+    },
+    "difficolta": {
+        "dsa": true,
+        "tipologia": "definizione",
+        "infamia": "3",
+        "livello": "medio"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 31",
+    "materia": "Esempio",
+    "risposta": "prova 31",
+    "argomento": {
+        "oda": "oda 31",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "Non eccessivamente importante"
+    },
+    "difficolta": {
+        "dsa": true,
+        "tipologia": "definizione",
+        "infamia": "4",
+        "livello": "medio"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 32",
+    "materia": "Esempio",
+    "risposta": "prova 32",
+    "argomento": {
+        "oda": "oda 32",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "2"
+    },
+    "difficolta": {
+        "dsa": true,
+        "tipologia": "definizione",
+        "infamia": "4",
+        "livello": "avanzato"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 33",
+    "materia": "Esempio",
+    "risposta": "prova 33",
+    "argomento": {
+        "oda": "oda 33",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "5"
+    },
+    "difficolta": {
+        "dsa": true,
+        "tipologia": "definizione",
+        "infamia": "5",
+        "livello": "avanzato"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 34",
+    "materia": "Esempio",
+    "risposta": "prova 34",
+    "argomento": {
+        "oda": "oda 34",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "5"
+    },
+    "difficolta": {
+        "dsa": true,
+        "tipologia": "problema",
+        "infamia": "666",
+        "livello": "avanzato"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 35",
+    "materia": "Esempio",
+    "risposta": "prova 35",
+    "argomento": {
+        "oda": "oda 35",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "4"
+    },
+    "difficolta": {
+        "dsa": true,
+        "tipologia": "problema",
+        "infamia": "4",
+        "livello": "avanzato"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 36",
+    "materia": "Esempio",
+    "risposta": "prova 36",
+    "argomento": {
+        "oda": "oda 36",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "1"
+    },
+    "difficolta": {
+        "dsa": true,
+        "tipologia": "problema",
+        "infamia": "4",
+        "livello": "medio"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 37",
+    "materia": "Esempio",
+    "risposta": "prova 37",
+    "argomento": {
+        "oda": "oda 37",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "Concetto interessante ma non centrale"
+    },
+    "difficolta": {
+        "dsa": true,
+        "tipologia": "problema",
+        "infamia": "2",
+        "livello": "medio"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 38",
+    "materia": "Esempio",
+    "risposta": "prova 38",
+    "argomento": {
+        "oda": "oda 38",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "5"
+    },
+    "difficolta": {
+        "dsa": true,
+        "tipologia": "problema",
+        "infamia": "2",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 39",
+    "materia": "Esempio",
+    "risposta": "prova 39",
+    "argomento": {
+        "oda": "oda 39",
+        "sottotematica": "sottotematica",
+        "trasversalita": true,
+        "centralita": "2"
+    },
+    "difficolta": {
+        "dsa": false,
+        "tipologia": "problema",
+        "infamia": "2",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 40",
+    "materia": "Esempio",
+    "risposta": "prova 40",
+    "argomento": {
+        "oda": "oda 40",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "2"
+    },
+    "difficolta": {
+        "dsa": false,
+        "tipologia": "problema",
+        "infamia": "1",
+        "livello": "base"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 41",
+    "materia": "Esempio",
+    "risposta": "prova 41",
+    "argomento": {
+        "oda": "oda 41",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "4"
+    },
+    "difficolta": {
+        "dsa": false,
+        "tipologia": "esercizio",
+        "infamia": "3",
+        "livello": "medio"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 42",
+    "materia": "Esempio",
+    "risposta": "prova 42",
+    "argomento": {
+        "oda": "oda 42",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "Fondamento"
+    },
+    "difficolta": {
+        "dsa": false,
+        "tipologia": "esercizio",
+        "infamia": "3",
+        "livello": "medio"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 43",
+    "materia": "Esempio",
+    "risposta": "prova 43",
+    "argomento": {
+        "oda": "oda 43",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "4"
+    },
+    "difficolta": {
+        "dsa": false,
+        "tipologia": "esercizio",
+        "infamia": "4",
+        "livello": "medio"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 44",
+    "materia": "Esempio",
+    "risposta": "prova 44",
+    "argomento": {
+        "oda": "oda 44",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "4"
+    },
+    "difficolta": {
+        "dsa": false,
+        "tipologia": "esercizio",
+        "infamia": "5",
+        "livello": "avanzato"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 45",
+    "materia": "Esempio",
+    "risposta": "prova 45",
+    "argomento": {
+        "oda": "oda 45",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": "Aiuta la comprensione di concetti futuri"
+    },
+    "difficolta": {
+        "dsa": false,
+        "tipologia": "esercizio",
+        "infamia": "5",
+        "livello": "avanzato"
+    }
+},
+{
+    "tematica": "tematica",
+    "testo": "Testo 46",
+    "materia": "Esempio",
+    "risposta": "prova 46",
+    "argomento": {
+        "oda": "oda 46",
+        "sottotematica": "sottotematica",
+        "trasversalita": false,
+        "centralita": ""
+    },
+    "difficolta": {
+        "dsa": false,
+        "tipologia": "esercizio",
+        "infamia": "3",
+        "livello": "avanzato"
+    }
 }
 ]
