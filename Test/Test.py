@@ -3,6 +3,7 @@ import os
 import sys
 import json
 import logging
+import tempfile
 
 # Add the parent directory of the current script to sys.path
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -185,13 +186,18 @@ class Test_cartella_controllo(unittest.TestCase):
         """
         Test per la gestione di una cartella già esistente.
         """
-        test_folder_path = "./Existing_test_folder"
-        
-        os.makedirs(test_folder_path)
-        
-        Cartella_controllo(test_folder_path)
-        
-        self.assertTrue(os.path.exists(test_folder_path))
+            # Create a temporary directory
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            test_folder_path = os.path.join(tmp_dir, "Existing_test_folder")
+            
+                # Ensure that the folder already exists
+            os.makedirs(test_folder_path, exist_ok=True)
+            
+            # Call the function under test
+            Cartella_controllo(test_folder_path)
+                
+            # Assert that the folder still exists
+            self.assertTrue(os.path.exists(test_folder_path))
 
 
 class TestScriviVerifica(unittest.TestCase):
