@@ -10,7 +10,7 @@ parent_dir = os.path.dirname(current_dir)
 sys.path.append(parent_dir)
 
 from Carica_esercizio import Append_un_file_json
-from Generazione import Leggi_json_file
+from Generazione import Leggi_json_file, Genera
 from Tkinter_methods import Prima_lettera_maiuscola
 from Scrivi import Cartella_controllo, Scrivi_verifica_s, Scrivi_verifica_d
 from Verifica import Verifica
@@ -279,8 +279,65 @@ class TestScriviVerifica(unittest.TestCase):
         if os.path.exists(file_path_d):
             os.remove(file_path_d)
         
+        os.rmdir(f"./Smart_Test_Verifiche_{self.verifica.esercizi[0].materia}/")
+        
+
+class TestGenera(unittest.TestCase):
+    """
+    Testa la funzione Genera che si occupa di creare una verifica
+    """
+
+    def setUp(self):
+        """
+        Prepara il test creando un file JSON di esempio con dati fittizi sugli esercizi.
+        """
+        # Crea un dizionario con dati fittizi sugli esercizi
+        path_esempio = "./Esercizi/Esempio_Esercizi.json"
 
 
+        with open(path_esempio, "r") as file:
+            
+            self.sample_json_data = json.load(file)
 
+        os.makedirs("./Smart_Test/Esercizi/")
+
+        # Salva i dati fittizi JSON su un file temporaneo
+        with open("./Smart_Test/Esercizi/Esempio_Esercizi.json", "w") as f:
+            json.dump(self.sample_json_data, f)
+
+
+    def test_genera_verifica(self):
+        """
+        Testa la generazione di una verifica con diversi parametri.
+        """
+        # Fornisci parametri di input di esempio
+        materia = "Esempio"
+        tematica = "tematica"
+        sottotematica = "sottotematica"
+        n_esercizi = 5
+        n_problemi = 2
+        n_definizioni = 1
+        n_teoria = 2
+        n_base = 3
+        n_medi = 3
+        n_avanzati = 4
+        
+        # Chiama la funzione Genera con il file JSON di dati di esempio
+        verifica = Genera(materia, tematica, sottotematica, n_esercizi, n_problemi, n_definizioni, n_teoria, n_base, n_medi, n_avanzati, json_data_path="esercizi_di_prova.json")
+        
+        # Verifica che l'oggetto di verifica non sia None
+        self.assertIsNotNone(verifica)
+        
+        # Verifica che l'oggetto di verifica contenga il numero corretto di esercizi
+        self.assertEqual(len(verifica.esercizi), n_esercizi + n_problemi + n_definizioni + n_teoria)
+
+    def tearDown(self):
+        """
+        Pulisce il test rimuovendo il file JSON di esempio.
+        """
+        # Pulizia: Rimuovi il file JSON di esempio
+        os.remove("./Smart_Test/Esercizi/Esempio_Esercizi.json")
+
+        os.rmdir("./Smart_Test/Esercizi")
 if __name__ == '__main__':
     unittest.main()
