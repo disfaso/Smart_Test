@@ -6,7 +6,7 @@ class Verifica:
         Classe Verifica, 
         variabile: 
                 n_esercizi : numero esercizi, 
-                esercizi : alista di elementi della classe Esercizio di dimensioni n_esercizi
+                esercizi : una lista di elementi della classe Esercizio di dimensioni n_esercizi
     """
 
     def __init__(
