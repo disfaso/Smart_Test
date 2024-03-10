@@ -45,7 +45,7 @@ Finestra home
 ==============
 La finestra home che si apre al caricamento ci permette di scegliere se caricare un quesito o se generare una verifica
 
-<img src="https://github.com/disfaso/Smart_Test/raw/main/Screenshots/finestra_home.png"/>
+.. image:: ../Screenshots/finestra_home.png
     :alt: Finestra home
 
 Creare un quesito
