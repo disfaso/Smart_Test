@@ -1,7 +1,7 @@
 import tkinter as tk
 from Tkinter_methods import Valida_input, Chiudi_finestra, Prima_lettera_maiuscola, Controlla_slash
 from Generazione import Genera
-from Scrivi import Scrivi_verifica_s
+from Scrivi import Scrivi_verifica_s, Scrivi_verifica_d
 
 
 
@@ -161,6 +161,7 @@ def Finestra_generazione():
             n_base = n_b,
         )
         Scrivi_verifica_s(verifica=verifica, classificazione = c)
+        Scrivi_verifica_d(verifica=verifica, classificazione = c)
 
     def Bottone_home():
         from Finestra_home import Finestra_home
