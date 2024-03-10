@@ -12,7 +12,7 @@ sys.path.append(parent_dir)
 from Carica_esercizio import Append_un_file_json
 from Generazione import Leggi_json_file
 from Tkinter_methods import Prima_lettera_maiuscola
-from Scrivi import Cartella_controllo, Scrivi_verifica_s
+from Scrivi import Cartella_controllo, Scrivi_verifica_s, Scrivi_verifica_d
 from Verifica import Verifica
 from Esercizio import Esercizio, Argomento, Difficolta
 
@@ -249,22 +249,36 @@ class TestScriviVerifica(unittest.TestCase):
         ]
         self.classificazione = "A"
 
-    def test_scrivi_verifica(self):
+    def test_scrivi_verifica_s(self):
         """
         Esegue la funzione Scrivi_verifica_s e verifica se il file .docx è stato creato correttamente.
         """
         Scrivi_verifica_s(self.verifica, self.classificazione)
 
         file_path = f"./Smart_Test/Verifiche_{self.verifica.esercizi[0].materia}/Verifica_{self.classificazione}.docx"
-        self.assertTrue(os.path.exists(file_path), "Il file .docx non è stato creato")
+        self.assertTrue(os.path.exists(file_path), "Il file .docx per studenti non è stato creato")
+
+    def test_scrivi_verifica_d(self):
+        """
+        Esegue la funzione Scrivi_verifica_d e verifica se il file .docx è stato creato correttamente.
+        """
+        Scrivi_verifica_d(self.verifica, self.classificazione)
+        file_path_d = f"./Smart_Test/Verifiche_{self.verifica.esercizi[0].materia}/Verifica_docente_{self.classificazione}.docx"
+        self.assertTrue(os.path.exists(file_path_d), "Il file .docx per docenti non è stato creato")
 
     def tearDown(self):
         """
         Pulisce i file temporanei creati durante i test.
         """
         file_path = f"./Smart_Test/Verifiche_{self.verifica.esercizi[0].materia}/Verifica_{self.classificazione}.docx"
+        file_path_d = f"./Smart_Test/Verifiche_{self.verifica.esercizi[0].materia}/Verifica_docente_{self.classificazione}.docx"
+        
         if os.path.exists(file_path):
             os.remove(file_path)
+
+        if os.path.exists(file_path_d):
+            os.remove(file_path_d)
+        
 
 
 
