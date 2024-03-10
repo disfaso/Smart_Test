@@ -98,10 +98,10 @@ def Scrivi_verifica_d(verifica: Verifica, classificazione: str):
         doc.add_heading(titolo, level=2)
 
         if esercizio.difficolta.dsa:
-            p_dsa = doc.add_paragraph("Quesito particolarmente complesso per studenti con disturbi specifici dell'apprendimento", level=1)
+            p_dsa = doc.add_paragraph("Quesito particolarmente complesso per studenti con disturbi specifici dell'apprendimento")
             Colore_rosso(p_dsa)
         if esercizio.argomento.trasversalita:
-            p_tras = doc.add_paragraph("Il quesito ha elementi di trasversalità con altre materie", level=1)
+            p_tras = doc.add_paragraph("Il quesito ha elementi di trasversalità con altre materie")
             Colore_rosso(p_tras)
         
         p_car = doc.add_paragraph(f"Tipologia esercizio: {tipologia}, Livello esercizio: {livello}\n Indicazioni sulla centralità del quesito rispetto all'argomento della verifica: {centralita}")
