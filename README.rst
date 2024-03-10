@@ -47,7 +47,7 @@ La finestra home che si apre al caricamento ci permette di scegliere se caricare
 
 .. image:: https://github.com/disfaso/Smart_Test/blob/main/Screenshots/finestra_home.png
 
-Creare un quesito
+Caricare un quesito
 =====================
 La creazione di un quesito permette di specificare i parametri con cui questo quesito sarà salvato:
 
@@ -87,6 +87,10 @@ della materia indicata secondo i parametri richiesti:
     permetta al file di essere salvato come file unico, distinto 
     da altre verifiche generate
 
+Il programma genererà due file, uno con i quesiti pensati per gli studenti, con numero del quesito e testo,
+un'altro documento per il docente, in cui ogni quesito viene accompagnato dai restanti dati che possono aiutare 
+il docente ad orientarsi all'interno degli esercizi.
+
 .. image:: https://github.com/disfaso/Smart_Test/blob/main/Screenshots/finestra_generazione.png
 
 
@@ -112,4 +116,13 @@ Dà come risultato una verifica che si mostra equivalente a questa:
 
 .. image:: https://github.com/disfaso/Smart_Test/blob/main/Screenshots/esempio_file.png
 
-.. image:: https://github.com/disfaso/Smart_Test/blob/main/Screenshots/esempio_verifica.png
+La verifica per gli studenti appare in questo formato, modificabile a discrezione dell'utilizzatore
+
+.. image:: https://github.com/disfaso/Smart_Test/blob/main/Screenshots/esempio_studente.png
+
+
+Il documento pensato per l'utilizzo del docente si presenta invece in questa forma:
+
+.. image:: https://github.com/disfaso/Smart_Test/blob/main/Screenshots/esempio_docente1.png
+
+.. image:: https://github.com/disfaso/Smart_Test/blob/main/Screenshots/esempio_docente2.png
