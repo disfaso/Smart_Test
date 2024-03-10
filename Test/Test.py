@@ -14,7 +14,7 @@ from Generazione import Leggi_json_file
 from Tkinter_methods import Prima_lettera_maiuscola
 from Scrivi import Cartella_controllo, Scrivi_verifica_s
 from Verifica import Verifica
-from Esercizio import Esercizio
+from Esercizio import Esercizio, Argomento, Difficolta
 
 class TestFileLoading(unittest.TestCase):
     """
@@ -209,8 +209,41 @@ class TestScriviVerifica(unittest.TestCase):
         Prepara gli oggetti di verifica e classificazione per i test.
         """
         self.verifica = Verifica()
-        self.verifica.esercizi = [Esercizio(tematica="Tematica", materia="Materia", argomento="Argomento", testo="Testo esercizio 1"),
-                                   Esercizio(tematica="Tematica", materia="Materia", argomento="Argomento", testo="Testo esercizio 2")]
+        self.verifica.esercizi = [Esercizio(
+                tematica="Tematica",
+                testo="Testo esercizio 1",
+                argomento=Argomento(
+                    oda="ODA",
+                    sottotematica="Sottotematica",
+                    trasversalita=True,
+                    centralita=2
+                ),
+                difficolta=Difficolta(
+                    dsa=True,
+                    tipologia="problema",
+                    infamia=5,
+                    livello="avanzato"
+                ),
+                materia="Materia",
+                risposta="Risposta"
+            ),
+            Esercizio(
+                tematica="Tematica",
+                testo="Testo esercizio 2",
+                argomento=Argomento(
+                    oda="ODA",
+                    sottotematica="Sottotematica",
+                    trasversalita=False,
+                    centralita=2
+                ),
+                difficolta=Difficolta(dsa=True,
+                    tipologia="problema",
+                    infamia=5,
+                    livello="avanzato"),
+                materia="Materia",
+                risposta="Risposta"
+            )
+        ]
         self.classificazione = "A"
 
     def test_scrivi_verifica(self):
