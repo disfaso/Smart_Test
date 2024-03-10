@@ -15,6 +15,9 @@ def Cartella_controllo(cartella_path):
     if not os.path.exists(cartella_path):
         os.makedirs(cartella_path)
 
+    else:
+        pass
+
 
 
 def Scrivi_verifica_s(verifica: Verifica, classificazione: str):
