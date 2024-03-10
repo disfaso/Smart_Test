@@ -112,7 +112,7 @@ def Scrivi_verifica_d(verifica: Verifica, classificazione: str):
 
         doc.add_paragraph(testo)
 
-        doc.add_heading("Risposta", level = 2).font.color.rgb = RGBColor(255, 0, 0)
+        doc.add_heading("Risposta", level = 2)
         p_risp = doc.add_paragraph(risposta)
         Colore_rosso(p_risp)
 
