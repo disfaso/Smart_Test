@@ -111,7 +111,15 @@ class TestFileLoading(unittest.TestCase):
 
 class Formattazione_stringhe(unittest.TestCase):
     """
-        Test per le funzioni di formattazione delle stringhe.
+    Test per le funzioni di formattazione delle stringhe.
+
+    Metodi:
+        test_Prima_lettera_maiuscola_stringa_min(self): Testa la funzione Prima_lettera_maiuscola con una stringa in minuscolo.
+        test_Prima_lettera_maiuscola_stringa_mai(self): Testa la funzione Prima_lettera_maiuscola con una stringa che ha già la prima lettera maiuscola.
+        test_Prima_lettera_maiuscola_stinga_vuota(self): Testa la funzione Prima_lettera_maiuscola con una stringa vuota.
+        test_Prima_lettera_maiuscola_stringa_num(self): Testa la funzione Prima_lettera_maiuscola con una stringa che inizia con un carattere numerico.
+        test_Prima_lettera_maiuscola_stringa_tutta_mai(self): Testa la funzione Prima_lettera_maiuscola con una stringa completamente maiuscola.
+        test_Prima_lettera_maiuscola_stringa_generica(self): Testa la funzione Prima_lettera_maiuscola con una stringa generica.
     """
     def test_Prima_lettera_maiuscola_stringa_min(self):
         """
