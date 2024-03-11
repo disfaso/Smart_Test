@@ -199,11 +199,12 @@ class Test_cartella_controllo(unittest.TestCase):
 
 class TestScriviVerifica(unittest.TestCase):
     """
-    Classe di test per la funzione Scrivi_verifica_s.
-
+    Test per le funzioni Scrivi_verifica_s e Scrivi_verifica_d.
+    
     Metodi:
         setUp(self): Prepara gli oggetti di verifica e classificazione per i test.
-        test_scrivi_verifica(self): Esegue la funzione Scrivi_verifica_s e verifica se il file .docx è stato creato correttamente.
+        test_scrivi_verifica_s(self): Esegue la funzione Scrivi_verifica_s e verifica se il file .docx per gli studenti è stato creato correttamente.
+        test_scrivi_verifica_d(self): Esegue la funzione Scrivi_verifica_d e verifica se il file .docx per i docenti è stato creato correttamente.
         tearDown(self): Pulisce i file temporanei creati durante i test.
     """
 
@@ -286,6 +287,10 @@ class TestScriviVerifica(unittest.TestCase):
 class TestGenera(unittest.TestCase):
     """
     Testa la funzione Genera che si occupa di creare una verifica
+    Metodi:
+        setUp(self): Prepara il test creando un file JSON di esempio con dati fittizi sugli esercizi
+        test_genera_verifica(self): Testa la generazione di una verifica con diversi parametri.
+        tearDown(self): Pulisce i file temporanei creati durante i test.
     """
 
     def setUp(self):
