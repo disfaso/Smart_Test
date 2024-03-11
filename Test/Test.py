@@ -19,6 +19,14 @@ from Esercizio import Esercizio, Argomento, Difficolta
 class TestFileLoading(unittest.TestCase):
     """
     Test per le funzioni di caricamento dei file.
+
+    Metodi:
+        test_append_un_file_json_success(self): Testa l'aggiunta di dati a un file JSON esistente.
+        test_aggiungi_a_file_non_trovato(self): Testa la gestione di FileNotFoundError durante l'aggiunta di dati a un file inesistente.
+        test_aggiungi_a_file_non_json(self): Testa la gestione di JSONDecodeError durante l'aggiunta di dati a un file non JSON.
+        test_lettura_file_json_conosciuto(self): Testa la lettura dei dati da un file JSON conosciuto.
+        test_leggi_un_file_non_presente(self): Testa la gestione di FileNotFoundError durante la lettura di un file inesistente.
+        test_leggi_file_non_json(self): Testa la gestione di JSONDecodeError durante la lettura di un file non JSON.
     """
     def test_append_un_file_json_success(self):
         """
