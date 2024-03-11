@@ -11,7 +11,7 @@ sys.path.append(parent_dir)
 
 from Carica_esercizio import Append_un_file_json
 from Generazione import Leggi_json_file, Genera
-from Tkinter_methods import Prima_lettera_maiuscola
+from Tkinter_methods import Prima_lettera_maiuscola, Controlla_slash
 from Scrivi import Cartella_controllo, Scrivi_verifica_s, Scrivi_verifica_d
 from Verifica import Verifica
 from Esercizio import Esercizio, Argomento, Difficolta
@@ -374,6 +374,60 @@ class TestGenera(unittest.TestCase):
 
         os.rmdir("./Smart_Test/Esercizi")
         os.rmdir("./Smart_Test/")
+
+class TestControllaSlash(unittest.TestCase):
+    """
+    Test per la funzione Controlla_slash.
+
+    Metodi:
+        test_sostituzione_slash(): Verifica che la funzione sostituisca correttamente i caratteri '/' con '_'.
+        test_stringa_vuota(): Verifica il comportamento della funzione con una stringa vuota.
+        test_nessun_slash(): Verifica il comportamento della funzione quando la stringa di input non contiene alcun carattere '/'.
+        test_multipli_slash(): Verifica il comportamento della funzione con più caratteri '/' consecutivi.
+    """
+
+    def test_sostituzione_slash(self):
+        """
+        Verifica che la funzione sostituisca correttamente i caratteri '/' con '_'.
+        """
+        input_string = "hello/world"
+        expected_output = "hello_world"
+        
+        output_string = Controlla_slash(input_string)
+        
+        self.assertEqual(output_string, expected_output, "La funzione non ha sostituito correttamente i caratteri '/' con '_'.")
+    
+    def test_stringa_vuota(self):
+        """
+        Verifica il comportamento della funzione con una stringa vuota.
+        """
+        input_string = ""
+        expected_output = ""
+        
+        output_string = Controlla_slash(input_string)
+        
+        self.assertEqual(output_string, expected_output, "La funzione non ha gestito correttamente una stringa vuota.")
+    
+    def test_nessun_slash(self):
+        """
+        Verifica il comportamento della funzione quando la stringa di input non contiene alcun carattere '/'.
+        """
+        input_string = "hello_world"
+        
+        output_string = Controlla_slash(input_string)
+        
+        self.assertEqual(output_string, input_string, "La funzione ha modificato la stringa nonostante non contenesse caratteri '/'.")
+
+    def test_multipli_slash(self):
+        """
+        Verifica il comportamento della funzione con più caratteri '/' consecutivi.
+        """
+        input_string = "hello//world"
+        expected_output = "hello__world"
+        
+        output_string = Controlla_slash(input_string)
+        
+        self.assertEqual(output_string, expected_output, "La funzione non ha gestito correttamente più caratteri '/' consecutivi.")
 
 
 if __name__ == '__main__':
