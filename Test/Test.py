@@ -167,6 +167,11 @@ class Formattazione_stringhe(unittest.TestCase):
 class Test_cartella_controllo(unittest.TestCase):
     """
         Test per la creazione di una cartella in caso di mancata esistenza
+    
+    Metodi:
+        test_crea_cartella_se_non_esiste(self): Verifica se una cartella viene creata correttamente se non esiste.
+        test_cartella_gia_esistente(self): Verifica se la funzione gestisce correttamente una cartella già esistente.
+    
     """
     def test_crea_cartella_se_non_esiste(self):
         """
