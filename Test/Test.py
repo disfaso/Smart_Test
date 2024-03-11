@@ -109,9 +109,9 @@ class TestFileLoading(unittest.TestCase):
         logging.basicConfig(level=logging.WARNING)
 
 
-class Formattazione_stringhe(unittest.TestCase):
+class test_prima_lettera_maiuscola(unittest.TestCase):
     """
-    Test per le funzioni di formattazione delle stringhe.
+    Test per la funzione che pone le stringhe minuscole con prima lettera maiuscola
 
     Metodi:
         test_Prima_lettera_maiuscola_stringa_min(self): Testa la funzione Prima_lettera_maiuscola con una stringa in minuscolo.
